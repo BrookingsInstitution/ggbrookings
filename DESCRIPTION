@@ -1,0 +1,15 @@
+Package: ggbrookings
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Manuel",
+           family = "Alcalá Kovalski",
+           role = c("aut", "cre"),
+           email = "malcalakovalski@brookings.edu",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Ggplot2 implementation of the Brookings style guide.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
