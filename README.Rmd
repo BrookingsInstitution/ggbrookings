@@ -6,7 +6,8 @@ output: github_document
 
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>", warning = FALSE,
-                      message = FALSE, background = '#FAFAFA', fig.width = 7, fig.height = 7, fig.align = "center")
+                      message = FALSE, background = '#FAFAFA', fig.width = 7,
+                      fig.path = "man/figures/", fig.height = 7, fig.align = "center")
 ```
 
 ## Installation

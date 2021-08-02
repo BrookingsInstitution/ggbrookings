@@ -51,7 +51,7 @@ ggplot(data = penguins,
   )
 ```
 
-<img src="README_files/figure-gfm/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
 
 ### Histogram
 
@@ -68,7 +68,7 @@ ggplot(data = penguins, aes(x = flipper_length_mm)) +
        title = "Penguin flipper lengths")
 ```
 
-<img src="README_files/figure-gfm/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
 ### Line plot
 
@@ -104,7 +104,7 @@ gapminder_filtered %>%
        caption = '**Source:** Gapminder')
 ```
 
-<img src="README_files/figure-gfm/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
 
 ### Faceting
 
@@ -123,4 +123,4 @@ ggplot(penguins, aes(x = flipper_length_mm,
   facet_wrap(~species)
 ```
 
-<img src="README_files/figure-gfm/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
