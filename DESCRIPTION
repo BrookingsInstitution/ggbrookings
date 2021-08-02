@@ -1,5 +1,5 @@
 Package: ggbrookings
-Title: What the Package Does (One Line, Title Case)
+Title: Grammar of Graphics in Brookings Style
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Manuel",
@@ -7,8 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "malcalakovalski@brookings.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: An implementation of the Brookings style guide using ggplot2. The inspiration for this package comes from the Urban Institutes
-\href{https: //github.com/UrbanInstitute/urbnthemes}{library(urbnthemes)} and all credit should go to the authors.
+Description: An implementation of the Brookings style guide using ggplot2.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
