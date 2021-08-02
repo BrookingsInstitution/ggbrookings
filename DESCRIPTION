@@ -12,6 +12,7 @@ License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
+URL: https://hutchins-center.github.io/ggbrookings/
 RoxygenNote: 7.1.1
 Imports: 
     ggplot2,
