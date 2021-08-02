@@ -1,15 +1,8 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# <img src="man/figures/logo.png" align="right" alt="" width="150" />
+# pkgdown <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
-
-
-<!-- badges: start -->
-[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-<!-- badges: end -->
-
-`ggbrookings` implements the Brookings style guide in `ggplot2`.
 ## Installation
 
 ``` r
