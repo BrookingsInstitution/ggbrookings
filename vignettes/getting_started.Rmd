@@ -1,0 +1,50 @@
+---
+title: "getting_started"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{getting_started}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+```{r setup}
+library('tidyverse')
+library(ggbrookings)
+library('palmerpenguins')
+```
+
+Check that you have Roboto
+
+
+```{r}
+
+systemfonts::system_fonts() %>% 
+  filter(family == "Roboto") %>% 
+  transmute(
+    family, style,
+    file = str_extract(path, "[\\w-]+\\.ttf$")
+  )
+```
+
+```{r}
+penguins %>% 
+  ggplot(aes(x = bill_depth_mm, y = flipper_length_mm, color = sex)) +
+  geom_point() +
+  scale_color_brookings(palette = 'gender1') +
+  theme_brookings() +
+  labs(title = "Penguins",
+       subtitle = "A subtitle",
+       caption = "**Caption**") +
+  theme(plot.tag.position = 'topleft') +
+  facet_grid(.~ island )
+
+```
+
