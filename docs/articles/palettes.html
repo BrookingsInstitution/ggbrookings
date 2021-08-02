@@ -26,6 +26,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -44,12 +46,6 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
@@ -90,11 +86,11 @@
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://hutchins-center.github.io/ggbrookings/">ggbrookings</a></span><span class="op">)</span></code></pre></div>
-<p>You can check out all the colors for each palette by running <code><a href="../reference/brookings_view_palette.html">brookings_view_palette('name_of_palette')</a></code>. The colors in some of these palettes may still change from feedback and further experimentation. Some examples below:</p>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://hutchins-center.github.io/ggbrookings/" class="external-link">ggbrookings</a></span><span class="op">)</span></code></pre></div>
+<p>You can check out all the colors for each palette by running <code>brookings_view_palette('name_of_palette')</code>. The colors in some of these palettes may still change from feedback and further experimentation. Some examples below:</p>
 <div id="brand" class="section level2">
 <h2 class="hasAnchor">
-<a href="#brand" class="anchor"></a>Brand</h2>
+<a href="#brand" class="anchor" aria-hidden="true"></a>Brand</h2>
 <p>The brand palette is the default for the <code>scale_brookings_</code> functions. Use colors from the brand palette whenever possible.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
@@ -108,7 +104,7 @@
 </div>
 <div id="analogous" class="section level2">
 <h2 class="hasAnchor">
-<a href="#analogous" class="anchor"></a>Analogous</h2>
+<a href="#analogous" class="anchor" aria-hidden="true"></a>Analogous</h2>
 <p>Different shades of the same hue, or of similar hues can be used when the associated values are related.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/brookings_view_palette.html">brookings_view_palette</a></span><span class="op">(</span><span class="st">'analogous1'</span><span class="op">)</span>
@@ -121,7 +117,7 @@
 </div>
 <div id="contrasting" class="section level2">
 <h2 class="hasAnchor">
-<a href="#contrasting" class="anchor"></a>Contrasting</h2>
+<a href="#contrasting" class="anchor" aria-hidden="true"></a>Contrasting</h2>
 <p>Colors on the opposite ends of the spectrum. Use Brookings Blue with Secondary colors.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/brookings_view_palette.html">brookings_view_palette</a></span><span class="op">(</span><span class="st">'contrasting1'</span><span class="op">)</span>
@@ -134,7 +130,7 @@
 </div>
 <div id="semantic" class="section level2">
 <h2 class="hasAnchor">
-<a href="#semantic" class="anchor"></a>Semantic</h2>
+<a href="#semantic" class="anchor" aria-hidden="true"></a>Semantic</h2>
 <p>Where applicable, use colors that are associated with certain concepts. For example, <code>semantic3</code> could show subsets of gender data (female, male and other).</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/brookings_view_palette.html">brookings_view_palette</a></span><span class="op">(</span><span class="st">'semantic1'</span><span class="op">)</span>
@@ -151,7 +147,7 @@
 </div>
 <div id="positive-and-negative" class="section level2">
 <h2 class="hasAnchor">
-<a href="#positive-and-negative" class="anchor"></a>Positive and negative</h2>
+<a href="#positive-and-negative" class="anchor" aria-hidden="true"></a>Positive and negative</h2>
 <p>Shows pros, cons and neutral, or positive, negative and neutral data.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/brookings_view_palette.html">brookings_view_palette</a></span><span class="op">(</span><span class="st">'pos_neg1'</span><span class="op">)</span>
@@ -164,7 +160,7 @@
 </div>
 <div id="political" class="section level2">
 <h2 class="hasAnchor">
-<a href="#political" class="anchor"></a>Political</h2>
+<a href="#political" class="anchor" aria-hidden="true"></a>Political</h2>
 <p>Use red and blue of similar intensity to represent data related to political parties in the US. Yellow in political3 and political4 represents ‘Independent’ category</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/brookings_view_palette.html">brookings_view_palette</a></span><span class="op">(</span><span class="st">'political1'</span><span class="op">)</span>
@@ -185,7 +181,7 @@
 </div>
 <div id="categorical" class="section level2">
 <h2 class="hasAnchor">
-<a href="#categorical" class="anchor"></a>Categorical</h2>
+<a href="#categorical" class="anchor" aria-hidden="true"></a>Categorical</h2>
 <p>Distinguish discrete categories of data that do not have an inherent ordering. This palette uses distinct hues of visually similar brightness and saturation to avoid creating a sense of order or priority. A maximum of 6 categorical colors are provided as it becomes difficult for people to distinguish between hues after 5-8 colors. If more than 6 colors are needed, consider alternative solutions such as grouping some categories or using alternative visual cues.</p>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/brookings_view_palette.html">brookings_view_palette</a></span><span class="op">(</span><span class="st">'categorical'</span><span class="op">)</span>
@@ -194,7 +190,7 @@
 </div>
 <div id="sequential" class="section level2">
 <h2 class="hasAnchor">
-<a href="#sequential" class="anchor"></a>Sequential</h2>
+<a href="#sequential" class="anchor" aria-hidden="true"></a>Sequential</h2>
 <p>Sequential palettes are used to show an inherent order or variations in numeric values. Light colors typically indicate low values and darker or brighter colors indicate high values.</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/brookings_view_palette.html">brookings_view_palette</a></span><span class="op">(</span><span class="st">'sequential1'</span><span class="op">)</span>
@@ -208,7 +204,7 @@
 </div>
 <div id="diverging" class="section level2">
 <h2 class="hasAnchor">
-<a href="#diverging" class="anchor"></a>Diverging</h2>
+<a href="#diverging" class="anchor" aria-hidden="true"></a>Diverging</h2>
 <p>Diverging palettes are useful when dealing with negative and positive values or a range of values that have two extremes with a baseline central value, like zero. The Brookings diverging palette should uses two distinct hues of similar brightness and saturation with a neutral color in the middle. Using a discrete set of colors with evenly distributed gradation can improve clarity of values relative to a continuous palette.</p>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/brookings_view_palette.html">brookings_view_palette</a></span><span class="op">(</span><span class="st">'diverging'</span><span class="op">)</span>
@@ -217,7 +213,7 @@
 </div>
 <div id="miscellaneous" class="section level2">
 <h2 class="hasAnchor">
-<a href="#miscellaneous" class="anchor"></a>Miscellaneous</h2>
+<a href="#miscellaneous" class="anchor" aria-hidden="true"></a>Miscellaneous</h2>
 <p>A pleasing option using Brookings Blue and accent yellow.</p>
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/brookings_view_palette.html">brookings_view_palette</a></span><span class="op">(</span><span class="st">'misc'</span><span class="op">)</span>
@@ -237,11 +233,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Manuel Alcalá Kovalski.</p>
+  <p></p>
+<p>Developed by Manuel Alcalá Kovalski.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.6.1.9001.</p>
 </div>
 
       </footer>
@@ -249,6 +247,8 @@
 
   
 
+
+  
 
   </body>
 </html>

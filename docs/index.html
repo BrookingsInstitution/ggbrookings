@@ -26,6 +26,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -44,12 +46,6 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
@@ -80,21 +76,17 @@
   <div class="contents col-md-9">
 <div id="section" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#section" class="anchor"></a><img src="reference/figures/logo.png" align="right" alt="" width="150">
+<a href="#section" class="anchor" aria-hidden="true"></a><img src="reference/figures/logo.png" align="right" alt="" width="150">
 </h1></div>
 <!-- badges: start -->
 
-<p><code>ggbrookings</code> implements the Brookings style guide in <code>ggplot2</code>.</p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
+<p><code>ggbrookings</code> implements the Brookings style guide in <code>ggplot2</code>. ## Installation</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"Hutchins-Center/ggbrookings"</span>, build_vignettes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
-</div>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"Hutchins-Center/ggbrookings"</span>, build_vignettes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
-<a href="#usage" class="anchor"></a>Usage</h2>
+<a href="#usage" class="anchor" aria-hidden="true"></a>Usage</h2>
 <p>Currently, the <code>ggbrokings</code> package only has a few simple user facing functions:</p>
 <ul>
 <li><p><code><a href="reference/theme_brookings.html">theme_brookings()</a></code> overrides the default <code>ggplot2</code> theme for a custom one which adheres to the Brookings style guide.</p></li>
@@ -102,10 +94,10 @@
 <li><p><code>brookings_view_palette</code> is a helper function to see the colors from each palette and extract their hex codes.</p></li>
 </ul>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">librarian</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/librarian/man/shelf.html">shelf</a></span><span class="op">(</span><span class="va">tidyverse</span>, <span class="va">palmerpenguins</span>, <span class="va">ggbrookings</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">librarian</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/librarian/man/shelf.html" class="external-link">shelf</a></span><span class="op">(</span><span class="va">tidyverse</span>, <span class="va">palmerpenguins</span>, <span class="va">ggbrookings</span><span class="op">)</span></code></pre></div>
 <div id="scatterplot" class="section level3">
 <h3 class="hasAnchor">
-<a href="#scatterplot" class="anchor"></a>Scatterplot</h3>
+<a href="#scatterplot" class="anchor" aria-hidden="true"></a>Scatterplot</h3>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">penguins</span>,
        <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>,
@@ -130,7 +122,7 @@
 </div>
 <div id="histogram" class="section level3">
 <h3 class="hasAnchor">
-<a href="#histogram" class="anchor"></a>Histogram</h3>
+<a href="#histogram" class="anchor" aria-hidden="true"></a>Histogram</h3>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">penguins</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">flipper_length_mm</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_histogram</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>fill <span class="op">=</span> <span class="va">species</span><span class="op">)</span>,
@@ -146,30 +138,30 @@
 </div>
 <div id="line-plot" class="section level3">
 <h3 class="hasAnchor">
-<a href="#line-plot" class="anchor"></a>Line plot</h3>
+<a href="#line-plot" class="anchor" aria-hidden="true"></a>Line plot</h3>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/jennybc/gapminder">'gapminder'</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://wilkelab.org/ggtext/">'ggtext'</a></span><span class="op">)</span>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/jennybc/gapminder" class="external-link">'gapminder'</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://wilkelab.org/ggtext/" class="external-link">'ggtext'</a></span><span class="op">)</span>
 
 <span class="va">gapminder_filtered</span> <span class="op">&lt;-</span>
   <span class="va">gapminder</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">country</span> <span class="op">%in%</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'Argentina'</span>, <span class="st">'Brazil'</span>, <span class="st">'Uruguay'</span><span class="op">)</span><span class="op">)</span>  
+  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">country</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Argentina'</span>, <span class="st">'Brazil'</span>, <span class="st">'Uruguay'</span><span class="op">)</span><span class="op">)</span>  
 
 <span class="va">gapminder_filtered</span> <span class="op">%&gt;%</span> 
   <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, <span class="va">gdpPercap</span>, color <span class="op">=</span> <span class="va">country</span>, label <span class="op">=</span> <span class="va">country</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_line</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_label</span><span class="op">(</span>data <span class="op">=</span> <span class="va">gapminder_filtered</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fu">last</span><span class="op">(</span><span class="va">year</span><span class="op">)</span><span class="op">)</span>, <span class="fu">aes</span><span class="op">(</span>label <span class="op">=</span> <span class="va">country</span>, 
+  <span class="fu">geom_label</span><span class="op">(</span>data <span class="op">=</span> <span class="va">gapminder_filtered</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fu">last</span><span class="op">(</span><span class="va">year</span><span class="op">)</span><span class="op">)</span>, <span class="fu">aes</span><span class="op">(</span>label <span class="op">=</span> <span class="va">country</span>, 
                                                            x <span class="op">=</span> <span class="va">year</span> <span class="op">+</span> <span class="fl">3</span>, 
                                                            y <span class="op">=</span> <span class="va">gdpPercap</span> <span class="op">+</span> <span class="fl">250</span>, 
                                                            color <span class="op">=</span> <span class="va">country</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="reference/theme_brookings.html">theme_brookings</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">guides</span><span class="op">(</span>color <span class="op">=</span> <span class="st">'none'</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">scale_x_continuous</span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1952</span>, <span class="fl">2007</span>, <span class="fl">5</span><span class="op">)</span>,
-      limits  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1952</span>, <span class="fl">2012</span><span class="op">)</span>,
-      expand <span class="op">=</span> <span class="fu">expansion</span><span class="op">(</span>mult <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.1</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">scale_x_continuous</span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">1952</span>, <span class="fl">2007</span>, <span class="fl">5</span><span class="op">)</span>,
+      limits  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1952</span>, <span class="fl">2012</span><span class="op">)</span>,
+      expand <span class="op">=</span> <span class="fu">expansion</span><span class="op">(</span>mult <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.1</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu">scale_y_continuous</span><span class="op">(</span>
-      labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/label_dollar.html">label_dollar</a></span><span class="op">(</span><span class="op">)</span>, 
-                     limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">15000</span><span class="op">)</span>, breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">15000</span>, <span class="fl">2500</span><span class="op">)</span>,
+      labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/label_dollar.html" class="external-link">label_dollar</a></span><span class="op">(</span><span class="op">)</span>, 
+                     limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">15000</span><span class="op">)</span>, breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">15000</span>, <span class="fl">2500</span><span class="op">)</span>,
                      expand <span class="op">=</span> <span class="fu">expansion</span><span class="op">(</span><span class="fl">0</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="reference/scale_color_brookings.html">scale_color_brookings</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">'Economic growth in South America'</span>,
@@ -181,7 +173,7 @@
 </div>
 <div id="faceting" class="section level3">
 <h3 class="hasAnchor">
-<a href="#faceting" class="anchor"></a>Faceting</h3>
+<a href="#faceting" class="anchor" aria-hidden="true"></a>Faceting</h3>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">penguins</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">flipper_length_mm</span>,
                             y <span class="op">=</span> <span class="va">body_mass_g</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
@@ -203,35 +195,40 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
 <li><small>GPL (&gt;= 3)</small></li>
 </ul>
 </div>
+
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Manuel Alcalá Kovalski <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/YOUR-ORCID-ID" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a></li>
+<li><a href="https://www.tidyverse.org/lifecycle/#maturing" class="external-link"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a></li>
 </ul>
 </div>
-</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Manuel Alcalá Kovalski.</p>
+  <p></p>
+<p>Developed by Manuel Alcalá Kovalski.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p>
 </div>
 
       </footer>
@@ -239,6 +236,8 @@
 
   
 
+
+  
 
   </body>
 </html>
