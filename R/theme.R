@@ -10,10 +10,11 @@
 #' @export
 #'
 #' @examples
-theme_brookings <- function(base_size = 16,
+theme_brookings <- function(base_size = 12,
                             base_family = "Roboto",
                             base_line_size = base_size / 24,
-                            base_rect_size = base_size / 24) {
+                            base_rect_size = base_size / 24,
+                            ticks = TRUE) {
   # The half-line (base-fontsize / 2) sets up the basic vertical
   # rhythm of the theme. Most margins will be set to this value.
   # However, when we work with relative sizes, we may want to multiply
@@ -69,14 +70,7 @@ theme_brookings <- function(base_size = 16,
     axis.text.x.top =    element_text(margin = margin(b = 0.8 * half_line / 2), vjust = 0),
     axis.text.y =        element_text(margin = margin(r = 0.8 * half_line / 2), hjust = 1),
     axis.text.y.right =  element_text(margin = margin(l = 0.8 * half_line / 2), hjust = 0),
-    axis.ticks =         element_line(colour = "#000000"),
-    axis.ticks.length =  unit(half_line / 2, "pt"),
-    axis.ticks.length.x = NULL,
-    axis.ticks.length.x.top = NULL,
-    axis.ticks.length.x.bottom = NULL,
-    axis.ticks.length.y = NULL,
-    axis.ticks.length.y.left = NULL,
-    axis.ticks.length.y.right = NULL,
+
     axis.title.x =       element_text(margin = margin(t = 1.25 * half_line),
                                       size = rel(0.8),
                                       vjust = 1, face = 'bold'),
@@ -99,7 +93,7 @@ theme_brookings <- function(base_size = 16,
     legend.spacing =     unit( half_line, "pt"),
     legend.spacing.x =    NULL,
     legend.spacing.y =    NULL,
-    legend.margin =      margin(0,0,0,0),
+    # legend.margin =      margin(0,0,0,0),
     legend.key =         element_rect(fill = "grey95", colour = NA),
     legend.key.size =    unit(rel(0.2), "lines"),
     legend.key.height =  NULL,
@@ -120,13 +114,13 @@ theme_brookings <- function(base_size = 16,
     panel.background =   element_rect(fill = "#FAFAFA", colour = NA),
     panel.border =       element_blank(),
     panel.grid =         element_line(colour = "#CCCCCC",
-                                      size = rel(0.75),
+                                      # size = 1,
                                       linetype = "dotted"),
     panel.grid.major.x = element_blank(),
     panel.grid.minor =   element_blank(),
-    panel.spacing =      unit(half_line, "pt"),
-    panel.spacing.x =  unit(1.5, "lines"),
-    panel.spacing.y =  unit(2, "lines"),
+    # panel.spacing =      unit(half_line, "pt"),
+    # panel.spacing.x =  unit(1.5, "lines"),
+    # panel.spacing.y =  unit(2, "lines"),
     panel.ontop    =     FALSE,
 
     strip.background =   element_rect(fill = "#003A79", colour = NA),
@@ -136,14 +130,14 @@ theme_brookings <- function(base_size = 16,
       face = 'bold',
       margin = margin(0.8 * half_line, 0.8 * half_line, 0.8 * half_line, 0.8 * half_line)
     ),
-    strip.text.x =       NULL,
-    strip.text.y =       element_text(angle = -90),
-    strip.text.y.left =  element_text(angle = 90),
-    # strip.placement =    "outside",
-    strip.placement.x =  NULL,
-    strip.placement.y =  NULL,
-    strip.switch.pad.grid = unit(half_line / 2, "pt"),
-    strip.switch.pad.wrap = unit(half_line / 2, "pt"),
+    # strip.text.x =       NULL,
+    # strip.text.y =       element_text(angle = -90),
+    # strip.text.y.left =  element_text(angle = 90),
+    # # strip.placement =    "outside",
+    # strip.placement.x =  NULL,
+    # strip.placement.y =  NULL,
+    # strip.switch.pad.grid = unit(half_line / 2, "pt"),
+    # strip.switch.pad.wrap = unit(half_line / 2, "pt"),
 
     plot.background =    element_rect(colour = "#FAFAFA"),
     plot.title =         ggtext::element_textbox_simple(
@@ -158,7 +152,6 @@ theme_brookings <- function(base_size = 16,
     plot.title.position = "plot",
     plot.subtitle =      ggtext::element_textbox_simple(
       # font size "regular"
-      size = rel(1),
       hjust = 0,
 
       vjust = 1,
@@ -176,16 +169,34 @@ theme_brookings <- function(base_size = 16,
     plot.caption.position = "plot",
     plot.tag =           element_text(
       size = rel(0.8),
-      hjust = 0,
-      vjust = 0,
+      hjust = 0.5,
+      vjust = 0.5,
       color = "#003A79",
       margin = margin(b = half_line)
     ),
     plot.tag.position =  'top',
     plot.margin =        margin(half_line, half_line, half_line, half_line),
 
-    complete = TRUE
+    complete = FALSE
   )
 
-  # make sure all elements are set to NULL if not explicitly defined
+
+  if (ticks == FALSE) {
+    t <- t + theme(
+      axis.ticks = element_blank(),
+      axis.ticks.x = element_blank(),
+      axis.ticks.y = element_blank()
+    )
+  } else {
+    t <-
+      t + theme(
+        axis.ticks =         element_line(colour = "#000000"),
+        axis.ticks.length =  unit(half_line / 2, "pt"),
+        axis.ticks.length.x = NULL,
+        axis.ticks.length.x.top = NULL,
+        axis.ticks.length.x.bottom = NULL,
+        axis.ticks.y = element_blank()
+
+      )
+  }
 }

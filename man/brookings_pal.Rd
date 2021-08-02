@@ -4,7 +4,7 @@
 \alias{brookings_pal}
 \title{Return function to interpolate a brookings color palette}
 \usage{
-brookings_pal(palette = "main", reverse = FALSE, ...)
+brookings_pal(palette = "brand1", reverse = FALSE, ...)
 }
 \arguments{
 \item{palette}{Character name of palette in brookings_palettes}

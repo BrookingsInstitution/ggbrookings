@@ -4,7 +4,12 @@
 \alias{scale_color_brookings}
 \title{Color scale constructor for brookings colors}
 \usage{
-scale_color_brookings(palette = "main", discrete = TRUE, reverse = FALSE, ...)
+scale_color_brookings(
+  palette = "brand1",
+  discrete = TRUE,
+  reverse = FALSE,
+  ...
+)
 }
 \arguments{
 \item{palette}{Character name of brookings_palettes}

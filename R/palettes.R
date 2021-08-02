@@ -154,29 +154,10 @@ brookings_cols <- function(...) {
 #' @rdname brookings_palettes
 #' @export
 brookings_palettes <- list(
-  `qual` = brookings_cols('brookings blue', 'vivid blue'),
-  `main`  = brookings_cols("brookings blue", "vivid blue", "orange"),
-
-  `brand2` = brookings_cols('brookings blue', 'orange', 'space gray'),
-
-  `alternative` = brookings_cols('brookings blue', 'teal 40', 'yellow 50'),
-
-  `single` = brookings_cols('brookings blue'),
-
-  `cool`  = brookings_cols("brookings blue", "brand blue 50", "brand blue 20",  "space gray"),
-
-  `hot`   = brookings_cols("yellow", "orange", "magenta"),
-
-  `mixed` = brookings_cols("brookings blue", "vivid blue", "green", "yellow", "orange 60", "magenta"),
-
-  `categorical` = brookings_cols("brookings blue", "orange 60", "vivid blue", "yellow", "space gray", "green", "magenta"),
-
-  `gray`  = brookings_cols("space gray", "gray"),
-
   # BRAND COLORS
   # Use colors from the brand palette whenever possible.
   brand1 = brookings_cols("brookings blue", "vivid_blue_20", "orange_40"),
-  brand1 = brookings_cols("brookings blue","orange_40", "PMS 427 C"),
+  brand2 = brookings_cols("brookings blue","orange_40", "PMS 427 C"),
   # Analogous
   #Different shades of the same hue, or of similar hues can be used when the associated
   #values are related
@@ -190,11 +171,11 @@ brookings_palettes <- list(
 
   # SEMANTIC
   # Where applicable, use colors that are associated with certain concepts. For e.g., option 1 shows male and female data, and option 2 show pros and cons or positive and negative data.
-  gender1 = brookings_cols("teal_30", "red_40"),
-  gender2 = brookings_cols("teal_60", "red_80", "yellow_60"),
-  gender3 = brookings_cols("teal_30", "red_40", "yellow_40"),
-  pros_cons1 = brookings_cols("green_50", "red_70"),
-  pros_cons2 = brookings_cols("green_50", "red_70", "yellow_50"),
+  semantic1 = brookings_cols("teal_30", "red_40"),
+  semantic2 = brookings_cols("teal_60", "red_80", "yellow_60"),
+  semantic3 = brookings_cols("teal_30", "red_40", "yellow_40"),
+  pos_neg1= brookings_cols("green_50", "red_70"),
+  pos_neg2 = brookings_cols("green_50", "yellow_50", "red_70"),
 
 
   # POLITICAL
@@ -205,6 +186,17 @@ brookings_palettes <- list(
   political2 = brookings_cols("vivid_blue_30", "red_30"),
   political3 = brookings_cols("vivid_blue_60", "red_50", "yellow_60"),
   political4 = brookings_cols("vivid_blue_30", "red_30", "yellow_30"),
+
+  # CATEGORICAL
+  categorical = c("#2599adff", "#00649fff", "#fd9d1fff", "#f5cc05ff", "#de60a1ff", "#9e0d12ff"),
+
+  # SEQUENTIAL
+  sequential1 = c("#00649fff", "#0f78baff", "#1c8ad6ff", "#2e97eaff", "#56adf6ff",
+                        "#87c4feff", "#bcdefbff"),
+  sequential2 = c("#0d636fff", "#008080ff", "#009a80ff", "#2bb275ff", "#6dc960ff", "#b1dc44ff", "#fce829ff"),
+
+  # Diverging
+  diverging = c("#0f78baff", "#739fceff", "#b1c5deff", "#efefefff", "#f6b5a9ff", "#f07867ff", "#e02928ff"),
 
   # MISCELLANEOUS
   # A pleasing option using Brookings Blue and accent yellow
@@ -218,7 +210,7 @@ brookings_palettes <- list(
 #' @param reverse Boolean indicating whether the palette should be reversed
 #' @param ... Additional arguments to pass to colorRampPalette()
 #'
-brookings_pal <- function(palette = "main", reverse = FALSE, ...) {
+brookings_pal <- function(palette = "brand1", reverse = FALSE, ...) {
   pal <- brookings_palettes[[palette]]
 
   if (reverse) pal <- rev(pal)
@@ -238,7 +230,7 @@ brookings_pal <- function(palette = "main", reverse = FALSE, ...) {
 #' @export
 #'
 #' @examples
-scale_color_brookings <- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
+scale_color_brookings <- function(palette = "brand1", discrete = TRUE, reverse = FALSE, ...) {
   pal <- brookings_pal(palette = palette, reverse = reverse)
 
   if (discrete) {
@@ -260,7 +252,7 @@ scale_color_brookings <- function(palette = "main", discrete = TRUE, reverse = F
 #' @export
 #'
 #' @examples
-scale_fill_brookings <- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
+scale_fill_brookings <- function(palette = "brand1", discrete = TRUE, reverse = FALSE, ...) {
   pal <- brookings_pal(palette = palette, reverse = reverse)
 
   if (discrete) {

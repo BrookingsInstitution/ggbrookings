@@ -8,7 +8,7 @@
 \format{
 An object of class \code{character} of length 104.
 
-An object of class \code{list} of length 26.
+An object of class \code{list} of length 20.
 }
 \source{
 Brookings Style Guide

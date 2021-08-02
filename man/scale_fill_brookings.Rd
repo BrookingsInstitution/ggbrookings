@@ -4,7 +4,7 @@
 \alias{scale_fill_brookings}
 \title{Fill scale constructor for brookings colors}
 \usage{
-scale_fill_brookings(palette = "main", discrete = TRUE, reverse = FALSE, ...)
+scale_fill_brookings(palette = "brand1", discrete = TRUE, reverse = FALSE, ...)
 }
 \arguments{
 \item{palette}{Character name of palette in brookings_palettes}

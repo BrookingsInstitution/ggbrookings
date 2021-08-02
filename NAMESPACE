@@ -2,6 +2,7 @@
 
 export(brookings_colors)
 export(brookings_palettes)
+export(brookings_view_palette)
 export(roboto_import)
 export(scale_color_brookings)
 export(scale_fill_brookings)
