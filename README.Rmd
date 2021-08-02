@@ -6,7 +6,7 @@ output: github_document
 
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>", warning = FALSE,
-                      message = FALSE, tidy = TRUE, background = '#FAFAFA', fig.width = 7, fig.height = 7, fig.align = "center")
+                      message = FALSE, background = '#FAFAFA', fig.width = 7, fig.height = 7, fig.align = "center")
 ```
 
 ## Installation
@@ -35,9 +35,9 @@ librarian::shelf(tidyverse, palmerpenguins, ggbrookings)
 
 ```{r}
 ggplot(data = penguins,
-                         aes(x = bill_length_mm,
-                             y = bill_depth_mm,
-                             group = species)) +
+       aes(x = bill_length_mm,
+           y = bill_depth_mm,
+           group = species)) +
   geom_point(aes(color = species,
                  shape = species),
              size = 3,
@@ -45,12 +45,14 @@ ggplot(data = penguins,
   geom_smooth(method = "lm", se = FALSE, aes(color = species)) +
   theme_brookings() +
   scale_color_brookings(palette = "misc") +
-  labs(title = "Penguin bill dimensions",
-       subtitle = "Bill length and depth for Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER",
-       x = "Bill length (mm)",
-       y = "Bill depth (mm)",
-       color = "Penguin species",
-       shape = "Penguin species")
+  labs(
+    title = "Penguin bill dimensions",
+    subtitle = "Bill length and depth for Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER",
+    x = "Bill length (mm)",
+    y = "Bill depth (mm)",
+    color = "Penguin species",
+    shape = "Penguin species"
+  )
 ```
 
 ### Histogram
