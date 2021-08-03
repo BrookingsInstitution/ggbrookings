@@ -83,7 +83,7 @@
   <div class="contents col-md-9">
 <div id="ggbrookings-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#ggbrookings-" class="anchor" aria-hidden="true"></a>ggbrookings <img src="reference/figures/logo.png" align="right" alt="" width="120">
+<a href="#ggbrookings-" class="anchor" aria-hidden="true"></a>ggbrookings <img src="reference/figures/logo.png" align="right" width="120">
 </h1></div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
@@ -91,6 +91,9 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"Hutchins-Center/ggbrookings"</span>, build_vignettes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+<p><strong>Note:</strong> If you are on a Brookings laptop, you may need to change your timezone for <code>devtools</code> to work. This can be done by running:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span>TZ <span class="op">=</span> <span class="st">'UTC'</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
@@ -98,16 +101,17 @@
 <p>Currently, the <code>ggbrokings</code> package only has a few simple user facing functions:</p>
 <ul>
 <li><p><code><a href="reference/theme_brookings.html">theme_brookings()</a></code> overrides the default <code>ggplot2</code> theme for a custom one which adheres to the Brookings style guide.</p></li>
-<li><p><code><a href="reference/scale_color_brookings.html">scale_color_brookings()</a></code> and <code><a href="reference/scale_fill_brookings.html">scale_fill_brookings()</a></code> provide several color palettes that are consistent with the Brookings brand and designed to provide color accessiblity.</p></li>
-<li><p><code>brookings_view_palette</code> is a helper function to see the colors from each palette and extract their hex codes.</p></li>
+<li><p><code><a href="reference/scales_brookings.html">scale_color_brookings()</a></code> and <code><a href="reference/scales_brookings.html">scale_fill_brookings()</a></code> provide several color palettes that are consistent with the Brookings brand and designed to provide color accessiblity.</p></li>
+<li><p><code><a href="reference/brookings_view_palette.html">brookings_view_palette()</a></code> is a helper function to see the colors from each palette and extract their hex codes.</p></li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">librarian</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/librarian/man/shelf.html" class="external-link">shelf</a></span><span class="op">(</span><span class="va">tidyverse</span>, <span class="va">palmerpenguins</span>, <span class="va">ggbrookings</span><span class="op">)</span></code></pre></div>
-<div id="scatterplot" class="section level3">
-<h3 class="hasAnchor">
-<a href="#scatterplot" class="anchor" aria-hidden="true"></a>Scatterplot</h3>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">penguins</span>,
+<code class="sourceCode R"><span class="fu">librarian</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/librarian/man/shelf.html" class="external-link">shelf</a></span><span class="op">(</span><span class="va">tidyverse</span>, <span class="va">palmerpenguins</span>, <span class="va">ggbrookings</span><span class="op">)</span></code></pre></div>
+</div>
+<div id="examples" class="section level2">
+<h2 class="hasAnchor">
+<a href="#examples" class="anchor" aria-hidden="true"></a>Examples</h2>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R">  <span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">penguins</span>,
        <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>,
            y <span class="op">=</span> <span class="va">bill_depth_mm</span>,
            group <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
@@ -117,39 +121,29 @@
              alpha <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span>, se <span class="op">=</span> <span class="cn">FALSE</span>, <span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="reference/theme_brookings.html">theme_brookings</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="reference/scale_color_brookings.html">scale_color_brookings</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"misc"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">labs</span><span class="op">(</span>
-    title <span class="op">=</span> <span class="st">"Penguin bill dimensions"</span>,
-    subtitle <span class="op">=</span> <span class="st">"Bill length and depth for Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER"</span>,
-    x <span class="op">=</span> <span class="st">"Bill length (mm)"</span>,
-    y <span class="op">=</span> <span class="st">"Bill depth (mm)"</span>,
-    color <span class="op">=</span> <span class="st">"Penguin species"</span>,
-    shape <span class="op">=</span> <span class="st">"Penguin species"</span>
-  <span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/unnamed-chunk-2-1.png" style="display: block; margin: auto;"></p>
-</div>
-<div id="histogram" class="section level3">
-<h3 class="hasAnchor">
-<a href="#histogram" class="anchor" aria-hidden="true"></a>Histogram</h3>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">penguins</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">flipper_length_mm</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="reference/scales_brookings.html">scale_color_brookings</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"misc"</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Penguin bill dimensions"</span>,
+       subtitle <span class="op">=</span> <span class="st">"Bill length and depth for Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER"</span>,
+       x <span class="op">=</span> <span class="st">"Bill length (mm)"</span>,
+       y <span class="op">=</span> <span class="st">"Bill depth (mm)"</span>,
+       color <span class="op">=</span> <span class="st">"Penguin species"</span>,
+       shape <span class="op">=</span> <span class="st">"Penguin species"</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/penguin_dimensions-1.png" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R">  <span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">penguins</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">flipper_length_mm</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_histogram</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>fill <span class="op">=</span> <span class="va">species</span><span class="op">)</span>,
                  alpha <span class="op">=</span> <span class="fl">0.5</span>,
                  position <span class="op">=</span> <span class="st">"identity"</span>,
                  bins <span class="op">=</span> <span class="fl">30</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="reference/scale_fill_brookings.html">scale_fill_brookings</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"semantic3"</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="reference/scales_brookings.html">scale_fill_brookings</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"semantic3"</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="reference/theme_brookings.html">theme_brookings</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">labs</span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Flipper length (mm)"</span>,
        y <span class="op">=</span> <span class="st">"Frequency"</span>,
        title <span class="op">=</span> <span class="st">"Penguin flipper lengths"</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/unnamed-chunk-3-1.png" style="display: block; margin: auto;"></p>
-</div>
-<div id="line-plot" class="section level3">
-<h3 class="hasAnchor">
-<a href="#line-plot" class="anchor" aria-hidden="true"></a>Line plot</h3>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/jennybc/gapminder" class="external-link">'gapminder'</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://wilkelab.org/ggtext/" class="external-link">'ggtext'</a></span><span class="op">)</span>
+<p>You can change the size of your text proportionally by setting <code>theme_brookings(base_size = your_size)</code> as shown below:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">librarian</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/librarian/man/shelf.html" class="external-link">shelf</a></span><span class="op">(</span><span class="va">gapminder</span>, <span class="va">ggtext</span><span class="op">)</span>
 
 <span class="va">gapminder_filtered</span> <span class="op">&lt;-</span>
   <span class="va">gapminder</span> <span class="op">%&gt;%</span> 
@@ -158,45 +152,40 @@
 <span class="va">gapminder_filtered</span> <span class="op">%&gt;%</span> 
   <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, <span class="va">gdpPercap</span>, color <span class="op">=</span> <span class="va">country</span>, label <span class="op">=</span> <span class="va">country</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_line</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_label</span><span class="op">(</span>data <span class="op">=</span> <span class="va">gapminder_filtered</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fu">last</span><span class="op">(</span><span class="va">year</span><span class="op">)</span><span class="op">)</span>, <span class="fu">aes</span><span class="op">(</span>label <span class="op">=</span> <span class="va">country</span>, 
-                                                           x <span class="op">=</span> <span class="va">year</span> <span class="op">+</span> <span class="fl">3</span>, 
-                                                           y <span class="op">=</span> <span class="va">gdpPercap</span> <span class="op">+</span> <span class="fl">250</span>, 
-                                                           color <span class="op">=</span> <span class="va">country</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="reference/theme_brookings.html">theme_brookings</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_label</span><span class="op">(</span>data <span class="op">=</span> <span class="va">gapminder_filtered</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fu">last</span><span class="op">(</span><span class="va">year</span><span class="op">)</span><span class="op">)</span>, 
+             <span class="fu">aes</span><span class="op">(</span>label <span class="op">=</span> <span class="va">country</span>, 
+                 x <span class="op">=</span> <span class="va">year</span> <span class="op">+</span> <span class="fl">3</span>, 
+                 y <span class="op">=</span> <span class="va">gdpPercap</span> <span class="op">+</span> <span class="fl">250</span>, 
+                 color <span class="op">=</span> <span class="va">country</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="reference/theme_brookings.html">theme_brookings</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">16</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">guides</span><span class="op">(</span>color <span class="op">=</span> <span class="st">'none'</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">scale_x_continuous</span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">1952</span>, <span class="fl">2007</span>, <span class="fl">5</span><span class="op">)</span>,
-      limits  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1952</span>, <span class="fl">2012</span><span class="op">)</span>,
-      expand <span class="op">=</span> <span class="fu">expansion</span><span class="op">(</span>mult <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.1</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu">scale_y_continuous</span><span class="op">(</span>
-      labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/label_dollar.html" class="external-link">label_dollar</a></span><span class="op">(</span><span class="op">)</span>, 
+                     limits  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1952</span>, <span class="fl">2012</span><span class="op">)</span>,
+                     expand <span class="op">=</span> <span class="fu">expansion</span><span class="op">(</span>mult <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.1</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">scale_y_continuous</span><span class="op">(</span>labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/label_dollar.html" class="external-link">label_dollar</a></span><span class="op">(</span><span class="op">)</span>, 
                      limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">15000</span><span class="op">)</span>, breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">15000</span>, <span class="fl">2500</span><span class="op">)</span>,
                      expand <span class="op">=</span> <span class="fu">expansion</span><span class="op">(</span><span class="fl">0</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="reference/scale_color_brookings.html">scale_color_brookings</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="reference/scales_brookings.html">scale_color_brookings</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">'Economic growth in South America'</span>,
        subtitle <span class="op">=</span> <span class="st">'GDP per capita, 1952-2007'</span>,
        x <span class="op">=</span> <span class="cn">NULL</span>, 
        y <span class="op">=</span> <span class="cn">NULL</span>, 
        caption <span class="op">=</span> <span class="st">'**Source:** Gapminder'</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/unnamed-chunk-4-1.png" style="display: block; margin: auto;"></p>
-</div>
-<div id="faceting" class="section level3">
-<h3 class="hasAnchor">
-<a href="#faceting" class="anchor" aria-hidden="true"></a>Faceting</h3>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">penguins</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">flipper_length_mm</span>,
-                            y <span class="op">=</span> <span class="va">body_mass_g</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R">  <span class="fu">ggplot</span><span class="op">(</span><span class="va">penguins</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">flipper_length_mm</span>,
+                     y <span class="op">=</span> <span class="va">body_mass_g</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="va">sex</span><span class="op">)</span>,
              show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="reference/theme_brookings.html">theme_brookings</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="reference/scale_color_brookings.html">scale_color_brookings</a></span><span class="op">(</span><span class="st">'brand1'</span>, na.translate <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="reference/scales_brookings.html">scale_color_brookings</a></span><span class="op">(</span><span class="st">'brand1'</span>, na.translate <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Penguin flipper and body mass"</span>,
-       subtitle <span class="op">=</span> <span class="st">"Dimensions for  &lt;span style = 'color:#FF9E1B;'&gt;**male**&lt;/span&gt; and &lt;span style = 'color:#003A79;'&gt;**female**&lt;/span&gt; Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER"</span>,
+       subtitle <span class="op">=</span> <span class="st">"Dimensions for &lt;span style = 'color:#FF9E1B;'&gt;**male**&lt;/span&gt; and &lt;span style = 'color:#003A79;'&gt;**female**&lt;/span&gt; Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER"</span>,
        x <span class="op">=</span> <span class="st">"Flipper length (mm)"</span>,
        y <span class="op">=</span> <span class="st">"Body mass (g)"</span>,
        color <span class="op">=</span> <span class="st">"Penguin sex"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span><span class="va">species</span><span class="op">)</span></code></pre></div>
+  <span class="fu">facet_wrap</span><span class="op">(</span><span class="va">.</span> <span class="op">~</span> <span class="va">species</span>, nrow <span class="op">=</span> <span class="fl">3</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/unnamed-chunk-5-1.png" style="display: block; margin: auto;"></p>
-</div>
 </div>
 </div>
   </div>

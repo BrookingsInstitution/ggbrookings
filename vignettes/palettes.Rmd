@@ -2,7 +2,7 @@
 title: "Brookings Palettes"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{palettes}
+  %\VignetteIndexEntry{Brookings Palettes}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
