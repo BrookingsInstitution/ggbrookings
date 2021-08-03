@@ -42,7 +42,7 @@ librarian::shelf(tidyverse, palmerpenguins, ggbrookings)
 
 ## Examples
 
-```{r dimensions}
+```{r }
 
   ggplot(data = penguins,
        aes(x = bill_length_mm,
@@ -63,7 +63,7 @@ librarian::shelf(tidyverse, palmerpenguins, ggbrookings)
        shape = "Penguin species")
 ```
 
-```{r flipper}
+```{r }
   ggplot(data = penguins, aes(x = flipper_length_mm)) +
   geom_histogram(aes(fill = species),
                  alpha = 0.5,
@@ -79,7 +79,7 @@ librarian::shelf(tidyverse, palmerpenguins, ggbrookings)
 
 You can change the size of your text proportionally by setting `theme_brookings(base_size = your_size)` as shown below:
 
-```{r gapminder}
+```{r }
 librarian::shelf(gapminder, ggtext)
 
 gapminder_filtered <-
@@ -111,7 +111,7 @@ gapminder_filtered %>%
   
 ```
 
-```{r facet}
+```{r }
   ggplot(penguins, aes(x = flipper_length_mm,
                      y = body_mass_g)) +
   geom_point(aes(color = sex),

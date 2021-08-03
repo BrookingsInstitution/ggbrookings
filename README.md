@@ -58,7 +58,7 @@ librarian::shelf(tidyverse, palmerpenguins, ggbrookings)
        shape = "Penguin species")
 ```
 
-<img src="man/figures/dimensions-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
 ``` r
   ggplot(data = penguins, aes(x = flipper_length_mm)) +
@@ -73,7 +73,7 @@ librarian::shelf(tidyverse, palmerpenguins, ggbrookings)
        title = "Penguin flipper lengths")
 ```
 
-<img src="man/figures/flipper-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
 
 You can change the size of your text proportionally by setting
 `theme_brookings(base_size = your_size)` as shown below:
@@ -109,7 +109,7 @@ gapminder_filtered %>%
        caption = '**Source:** Gapminder')
 ```
 
-<img src="man/figures/gapminder-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 ``` r
   ggplot(penguins, aes(x = flipper_length_mm,
@@ -126,4 +126,4 @@ gapminder_filtered %>%
   facet_wrap(. ~ species, nrow = 3, ncol = 1)
 ```
 
-<img src="man/figures/facet-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
