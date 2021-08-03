@@ -13,6 +13,7 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 URL: https://hutchins-center.github.io/ggbrookings/, https://github.com/Hutchins-Center/ggbrookings
+BubReports: https://github.com/Hutchins-Center/ggbrookings/issues
 RoxygenNote: 7.1.1
 Imports: 
     ggplot2,

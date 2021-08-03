@@ -218,18 +218,28 @@ brookings_pal <- function(palette = "brand1", reverse = FALSE, ...) {
   colorRampPalette(pal, ...)
 }
 
-#' Color scale constructor for brookings colors
-#'
+#' Color scales in the Brookings style
+
 #' @param palette Character name of brookings_palettes
 #' @param discrete Boolean indicating whether color aesthetic is discrete or not
 #' @param reverse Boolean indicating whether the palette should be reversed
-#' @param ... Additional arguments passed to discrete_scale() or scale_color_gradientn(),
-#'  used respectively when discrete is TRUE or FALSE
+#' @param ... Additional arguments passed to discrete_scale() or scale_color_gradientn(), used respectively when discrete is TRUE or FALSE.
 #'
-#' @return
+#' @section Palettes:
+#' \describe{
+#'   \item{Analogous}{Different shades of the same hue, or of similar hues can be used when the associated values are related.}
+#'   \item{Contrasting}{Colors on the opposite ends of the spectrum. Use Brookings Blue with Secondary colors.}
+#'   \item{Semantic}{Where applicable, use colors that are associated with certain concepts. For e.g., semantic1, semantic2, and semantic3 could show subsets of gender data (female, male and other)}.
+#'   \item{Positive & Negative}{Shows pros, cons and neutral, or positive, negative and neutral data.}
+#'   \item{Political}{Use red and blue of similar intensity to represent data related to political parties in the US. Yellow in political3 and political4 represents ‘Independent’ category}
+#'   \item{Misc}{A pleasing option using Brookings Blue and accent yellow.}
+#' }
+#'
+#' @name scales_brookings
+NULL
+
+#' @rdname scales_brookings
 #' @export
-#'
-#' @examples
 scale_color_brookings <- function(palette = "brand1", discrete = TRUE, reverse = FALSE, ...) {
   pal <- brookings_pal(palette = palette, reverse = reverse)
 
@@ -240,18 +250,8 @@ scale_color_brookings <- function(palette = "brand1", discrete = TRUE, reverse =
   }
 }
 
-#' Fill scale constructor for brookings colors
-#'
-#' @param palette Character name of palette in brookings_palettes
-#' @param discrete Boolean indicating whether color aesthetic is discrete or not
-#' @param reverse Boolean indicating whether the palette should be reversed
-#' @param ... Additional arguments passed to discrete_scale() or
-#'            scale_fill_gradientn(), used respectively when discrete is TRUE or FALSE
-#'
-#' @return
+#' @rdname scales_brookings
 #' @export
-#'
-#' @examples
 scale_fill_brookings <- function(palette = "brand1", discrete = TRUE, reverse = FALSE, ...) {
   pal <- brookings_pal(palette = palette, reverse = reverse)
 

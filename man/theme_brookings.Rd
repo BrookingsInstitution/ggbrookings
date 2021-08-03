@@ -5,7 +5,7 @@
 \title{Title}
 \usage{
 theme_brookings(
-  base_size = 12,
+  base_size = 14,
   base_family = "Roboto",
   base_line_size = base_size/24,
   base_rect_size = base_size/24,
