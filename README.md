@@ -79,6 +79,23 @@ You can change the size of your text proportionally by setting
 `theme_brookings(base_size = your_size)` as shown below:
 
 ``` r
+  ggplot(penguins, aes(x = flipper_length_mm,
+                     y = body_mass_g)) +
+  geom_point(aes(color = sex),
+             show.legend = FALSE) +
+  theme_brookings() +
+  scale_color_brookings('brand1', na.translate = FALSE) +
+  labs(title = "Penguin flipper and body mass",
+       subtitle = "Dimensions for <span style = 'color:#FF9E1B;'>**male**</span> and <span style = 'color:#003A79;'>**female**</span> Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER",
+       x = "Flipper length (mm)",
+       y = "Body mass (g)",
+       color = "Penguin sex") +
+  facet_wrap(. ~ species, nrow = 3, ncol = 1)
+```
+
+<img src="man/figures/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+
+``` r
 librarian::shelf(gapminder, ggtext)
 
 gapminder_filtered <-
@@ -107,23 +124,6 @@ gapminder_filtered %>%
        x = NULL, 
        y = NULL, 
        caption = '**Source:** Gapminder')
-```
-
-<img src="man/figures/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
-
-``` r
-  ggplot(penguins, aes(x = flipper_length_mm,
-                     y = body_mass_g)) +
-  geom_point(aes(color = sex),
-             show.legend = FALSE) +
-  theme_brookings() +
-  scale_color_brookings('brand1', na.translate = FALSE) +
-  labs(title = "Penguin flipper and body mass",
-       subtitle = "Dimensions for <span style = 'color:#FF9E1B;'>**male**</span> and <span style = 'color:#003A79;'>**female**</span> Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER",
-       x = "Flipper length (mm)",
-       y = "Body mass (g)",
-       color = "Penguin sex") +
-  facet_wrap(. ~ species, nrow = 3, ncol = 1)
 ```
 
 <img src="man/figures/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />

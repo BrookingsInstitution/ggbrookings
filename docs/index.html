@@ -143,6 +143,20 @@
 <p><img src="reference/figures/unnamed-chunk-4-1.png" style="display: block; margin: auto;"></p>
 <p>You can change the size of your text proportionally by setting <code>theme_brookings(base_size = your_size)</code> as shown below:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R">  <span class="fu">ggplot</span><span class="op">(</span><span class="va">penguins</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">flipper_length_mm</span>,
+                     y <span class="op">=</span> <span class="va">body_mass_g</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="va">sex</span><span class="op">)</span>,
+             show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="reference/theme_brookings.html">theme_brookings</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="reference/scales_brookings.html">scale_color_brookings</a></span><span class="op">(</span><span class="st">'brand1'</span>, na.translate <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Penguin flipper and body mass"</span>,
+       subtitle <span class="op">=</span> <span class="st">"Dimensions for &lt;span style = 'color:#FF9E1B;'&gt;**male**&lt;/span&gt; and &lt;span style = 'color:#003A79;'&gt;**female**&lt;/span&gt; Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER"</span>,
+       x <span class="op">=</span> <span class="st">"Flipper length (mm)"</span>,
+       y <span class="op">=</span> <span class="st">"Body mass (g)"</span>,
+       color <span class="op">=</span> <span class="st">"Penguin sex"</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">facet_wrap</span><span class="op">(</span><span class="va">.</span> <span class="op">~</span> <span class="va">species</span>, nrow <span class="op">=</span> <span class="fl">3</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/unnamed-chunk-5-1.png" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">librarian</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/librarian/man/shelf.html" class="external-link">shelf</a></span><span class="op">(</span><span class="va">gapminder</span>, <span class="va">ggtext</span><span class="op">)</span>
 
 <span class="va">gapminder_filtered</span> <span class="op">&lt;-</span>
@@ -171,20 +185,6 @@
        x <span class="op">=</span> <span class="cn">NULL</span>, 
        y <span class="op">=</span> <span class="cn">NULL</span>, 
        caption <span class="op">=</span> <span class="st">'**Source:** Gapminder'</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/unnamed-chunk-5-1.png" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R">  <span class="fu">ggplot</span><span class="op">(</span><span class="va">penguins</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">flipper_length_mm</span>,
-                     y <span class="op">=</span> <span class="va">body_mass_g</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="va">sex</span><span class="op">)</span>,
-             show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="reference/theme_brookings.html">theme_brookings</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="reference/scales_brookings.html">scale_color_brookings</a></span><span class="op">(</span><span class="st">'brand1'</span>, na.translate <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Penguin flipper and body mass"</span>,
-       subtitle <span class="op">=</span> <span class="st">"Dimensions for &lt;span style = 'color:#FF9E1B;'&gt;**male**&lt;/span&gt; and &lt;span style = 'color:#003A79;'&gt;**female**&lt;/span&gt; Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER"</span>,
-       x <span class="op">=</span> <span class="st">"Flipper length (mm)"</span>,
-       y <span class="op">=</span> <span class="st">"Body mass (g)"</span>,
-       color <span class="op">=</span> <span class="st">"Penguin sex"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">facet_wrap</span><span class="op">(</span><span class="va">.</span> <span class="op">~</span> <span class="va">species</span>, nrow <span class="op">=</span> <span class="fl">3</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/unnamed-chunk-6-1.png" style="display: block; margin: auto;"></p>
 </div>
 </div>
