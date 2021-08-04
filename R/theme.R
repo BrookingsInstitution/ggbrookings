@@ -94,14 +94,13 @@ theme_brookings <- function(base_size = 14,
     # legend.spacing.x =    NULL,
     # legend.spacing.y =    NULL,
     # legend.margin =      margin(0,0,0,0),
-    legend.key =         element_rect(fill = "grey95", colour = NA),
+    legend.key =         element_blank(),
     legend.key.size =    unit(rel(0.8), "lines"),
     legend.key.height =  NULL,
     legend.key.width =   NULL,
     legend.text =        element_text(size = rel(1)),
-    legend.text.align =  NULL,
-    legend.title =       element_text(hjust = 0,
-                                      size = rel(1)),
+    legend.text.align =  0,
+    legend.title =       element_blank(),
     legend.title.align = NULL,
     legend.position =    "top",
     legend.direction =   NULL,
@@ -111,7 +110,7 @@ theme_brookings <- function(base_size = 14,
     # legend.box.background = element_blank(),
     # legend.box.spacing = unit(2 * half_line, "pt"),
 
-    panel.background =   element_rect(fill = "#FAFAFA", colour = NA),
+    panel.background =   element_blank(),
     panel.border =       element_blank(),
     panel.grid =         element_line(colour = "#CCCCCC",
                                       # size = 1,
@@ -155,26 +154,25 @@ theme_brookings <- function(base_size = 14,
       hjust = 0,
 
       vjust = 1,
-      margin = margin(b = half_line)
+      margin = margin(b = base_size)
     ),
     plot.caption =       ggtext::element_textbox_simple(
       # font size "small"
       size = rel(0.8),
       vjust = 1,
-      family = "Roboto Light",
       color = "#666666",
       hjust = 0,
       margin = margin(t = half_line)
     ),
     plot.caption.position = "plot",
     plot.tag =           element_text(
-      size = rel(0.8),
+      size = rel(1),
       hjust = 0.5,
       vjust = 0.5,
       color = "#003A79",
       margin = margin(b = half_line)
     ),
-    plot.tag.position =  'top',
+    plot.tag.position =  'topleft',
     plot.margin =        margin(half_line, half_line, half_line, half_line),
 
     complete = FALSE
