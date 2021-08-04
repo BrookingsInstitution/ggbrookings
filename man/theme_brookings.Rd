@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme.R
 \name{theme_brookings}
 \alias{theme_brookings}
-\title{Title}
+\title{Brookings style ggplot2 theme}
 \usage{
 theme_brookings(
   base_size = 14,
@@ -12,9 +12,20 @@ theme_brookings(
   ticks = TRUE
 )
 }
+\arguments{
+\item{base_size}{base font size, given in pts.}
+
+\item{base_family}{base font family. Default is "Roboto".}
+
+\item{base_line_size}{line size in mm.}
+
+\item{base_rect_size}{border size in mm.}
+
+\item{ticks}{include axis ticks. Default is FALSE.}
+}
 \value{
 
 }
 \description{
-Title
+A theme following the Brookings style guide.
 }

@@ -1,15 +1,17 @@
-#' Title
+#' Brookings style ggplot2 theme
 #'
-#' @param base_size
-#' @param base_family
-#' @param base_line_size
-#' @param base_rect_size
+#'  A theme following the Brookings style guide.
+#' @param base_size base font size, given in pts.
+#' @param base_family base font family. Default is "Roboto".
+#' @param base_line_size line size in mm.
+#' @param base_rect_size border size in mm.
+#' @param ticks include axis ticks. Default is FALSE.
 #' @importFrom ggtext element_textbox_simple
 #' @importFrom ggplot2 margin rel scale_color_gradientn scale_fill_gradientn theme theme_light unit
 #' @return
 #' @export
 #'
-#' @examples
+
 theme_brookings <- function(base_size = 14,
                             base_family = "Roboto",
                             base_line_size = base_size / 24,
