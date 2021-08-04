@@ -94,42 +94,48 @@
 <p><strong>Note:</strong> If you are on a Brookings laptop, you may need to change your timezone for <code>devtools</code> to work. This can be done by running:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span>TZ <span class="op">=</span> <span class="st">'UTC'</span><span class="op">)</span></code></pre></div>
+<p><strong>Roboto</strong> is Brooking’s main font. You will need to install it by visiting <a href="https://fonts.google.com/specimen/roboto" class="external-link">Google fonts</a> and clicking “Download family”. Once you’ve done this, unzip and open each of the .ttf files and click install. Finaly, run the code chunk below to ensure Roboto is imported and registered:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/roboto_import.html">roboto_import</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor" aria-hidden="true"></a>Usage</h2>
-<p>Currently, the <code>ggbrokings</code> package only has a few simple user facing functions:</p>
+<p>Currently, the <code>ggbrookings</code> package only has a few simple user facing functions:</p>
 <ul>
 <li><p><code><a href="reference/theme_brookings.html">theme_brookings()</a></code> overrides the default <code>ggplot2</code> theme for a custom one which adheres to the Brookings style guide.</p></li>
 <li><p><code><a href="reference/scales_brookings.html">scale_color_brookings()</a></code> and <code><a href="reference/scales_brookings.html">scale_fill_brookings()</a></code> provide several color palettes that are consistent with the Brookings brand and designed to provide color accessiblity.</p></li>
 <li><p><code><a href="reference/brookings_view_palette.html">brookings_view_palette()</a></code> is a helper function to see the colors from each palette and extract their hex codes.</p></li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">librarian</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/librarian/man/shelf.html" class="external-link">shelf</a></span><span class="op">(</span><span class="va">tidyverse</span>, <span class="va">palmerpenguins</span>, <span class="va">ggbrookings</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="examples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor" aria-hidden="true"></a>Examples</h2>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<p>In order to match the Brookings style in scatterplots you should set <code>geom_point(size = 2)</code> as below:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R">  <span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">penguins</span>,
        <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>,
            y <span class="op">=</span> <span class="va">bill_depth_mm</span>,
            group <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="va">species</span>,
                  shape <span class="op">=</span> <span class="va">species</span><span class="op">)</span>,
-             size <span class="op">=</span> <span class="fl">3</span>,
+             size <span class="op">=</span> <span class="fl">2</span>,
              alpha <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span>, se <span class="op">=</span> <span class="cn">FALSE</span>, <span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="reference/theme_brookings.html">theme_brookings</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="reference/scales_brookings.html">scale_color_brookings</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"misc"</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Penguin bill dimensions"</span>,
        subtitle <span class="op">=</span> <span class="st">"Bill length and depth for Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER"</span>,
+       caption <span class="op">=</span> <span class="st">'**Source:** Palmer Penguins'</span>,
+       tag <span class="op">=</span> <span class="st">'Figure 1'</span>,
        x <span class="op">=</span> <span class="st">"Bill length (mm)"</span>,
        y <span class="op">=</span> <span class="st">"Bill depth (mm)"</span>,
        color <span class="op">=</span> <span class="st">"Penguin species"</span>,
-       shape <span class="op">=</span> <span class="st">"Penguin species"</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/unnamed-chunk-3-1.png" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+       shape <span class="op">=</span> <span class="st">"Penguin species"</span><span class="op">)</span> </code></pre></div>
+<p><img src="reference/figures/unnamed-chunk-5-1.png" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R">  <span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">penguins</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">flipper_length_mm</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_histogram</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>fill <span class="op">=</span> <span class="va">species</span><span class="op">)</span>,
                  alpha <span class="op">=</span> <span class="fl">0.5</span>,
@@ -139,25 +145,31 @@
   <span class="fu"><a href="reference/theme_brookings.html">theme_brookings</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">labs</span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Flipper length (mm)"</span>,
        y <span class="op">=</span> <span class="st">"Frequency"</span>,
-       title <span class="op">=</span> <span class="st">"Penguin flipper lengths"</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/unnamed-chunk-4-1.png" style="display: block; margin: auto;"></p>
+       title <span class="op">=</span> <span class="st">"Penguin flipper lengths"</span>,
+       caption <span class="op">=</span> <span class="st">'**Source:** Palmer Penguins'</span>,
+       tag <span class="op">=</span> <span class="st">'Figure 2'</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/unnamed-chunk-6-1.png" style="display: block; margin: auto;"></p>
 <p>You can change the size of your text proportionally by setting <code>theme_brookings(base_size = your_size)</code> as shown below:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R">  <span class="fu">ggplot</span><span class="op">(</span><span class="va">penguins</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">flipper_length_mm</span>,
                      y <span class="op">=</span> <span class="va">body_mass_g</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="va">sex</span><span class="op">)</span>,
+             size <span class="op">=</span> <span class="fl">2</span>,
              show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="reference/theme_brookings.html">theme_brookings</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="reference/scales_brookings.html">scale_color_brookings</a></span><span class="op">(</span><span class="st">'brand1'</span>, na.translate <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Penguin flipper and body mass"</span>,
        subtitle <span class="op">=</span> <span class="st">"Dimensions for &lt;span style = 'color:#FF9E1B;'&gt;**male**&lt;/span&gt; and &lt;span style = 'color:#003A79;'&gt;**female**&lt;/span&gt; Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER"</span>,
+       caption <span class="op">=</span> <span class="st">'**Source:** Palmer Penguins'</span>,
+       tag <span class="op">=</span> <span class="st">'Figure 3'</span>,
        x <span class="op">=</span> <span class="st">"Flipper length (mm)"</span>,
        y <span class="op">=</span> <span class="st">"Body mass (g)"</span>,
        color <span class="op">=</span> <span class="st">"Penguin sex"</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">facet_wrap</span><span class="op">(</span><span class="va">.</span> <span class="op">~</span> <span class="va">species</span>, nrow <span class="op">=</span> <span class="fl">3</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/unnamed-chunk-5-1.png" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">librarian</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/librarian/man/shelf.html" class="external-link">shelf</a></span><span class="op">(</span><span class="va">gapminder</span>, <span class="va">ggtext</span><span class="op">)</span>
+<p><img src="reference/figures/unnamed-chunk-7-1.png" style="display: block; margin: auto;"></p>
+<p>In order to match the Brookings style in line plots you should set <code>geom_line(size = 1.5)</code> as below:</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">librarian</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/librarian/man/shelf.html" class="external-link">shelf</a></span><span class="op">(</span><span class="va">gapminder</span>, <span class="va">ggtext</span>, <span class="va">glue</span><span class="op">)</span>
 
 <span class="va">gapminder_filtered</span> <span class="op">&lt;-</span>
   <span class="va">gapminder</span> <span class="op">%&gt;%</span> 
@@ -165,7 +177,7 @@
 
 <span class="va">gapminder_filtered</span> <span class="op">%&gt;%</span> 
   <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, <span class="va">gdpPercap</span>, color <span class="op">=</span> <span class="va">country</span>, label <span class="op">=</span> <span class="va">country</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_line</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_line</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_label</span><span class="op">(</span>data <span class="op">=</span> <span class="va">gapminder_filtered</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fu">last</span><span class="op">(</span><span class="va">year</span><span class="op">)</span><span class="op">)</span>, 
              <span class="fu">aes</span><span class="op">(</span>label <span class="op">=</span> <span class="va">country</span>, 
                  x <span class="op">=</span> <span class="va">year</span> <span class="op">+</span> <span class="fl">3</span>, 
@@ -180,12 +192,14 @@
                      limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">15000</span><span class="op">)</span>, breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">15000</span>, <span class="fl">2500</span><span class="op">)</span>,
                      expand <span class="op">=</span> <span class="fu">expansion</span><span class="op">(</span><span class="fl">0</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="reference/scales_brookings.html">scale_color_brookings</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  
+   
   <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">'Economic growth in South America'</span>,
        subtitle <span class="op">=</span> <span class="st">'GDP per capita, 1952-2007'</span>,
+       caption <span class="op">=</span> <span class="st">'**Source:** Gapminder'</span>,
        x <span class="op">=</span> <span class="cn">NULL</span>, 
-       y <span class="op">=</span> <span class="cn">NULL</span>, 
-       caption <span class="op">=</span> <span class="st">'**Source:** Gapminder'</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/unnamed-chunk-6-1.png" style="display: block; margin: auto;"></p>
+       y <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span> </code></pre></div>
+<p><img src="reference/figures/unnamed-chunk-8-1.png" style="display: block; margin: auto;"></p>
 </div>
 </div>
   </div>

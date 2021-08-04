@@ -17,9 +17,19 @@ timezone for `devtools` to work. This can be done by running:
 Sys.setenv(TZ = 'UTC')
 ```
 
+**Roboto** is Brooking’s main font. You will need to install it by
+visiting [Google fonts](https://fonts.google.com/specimen/roboto) and
+clicking “Download family”. Once you’ve done this, unzip and open each
+of the .ttf files and click install. Finaly, run the code chunk below to
+ensure Roboto is imported and registered:
+
+``` r
+roboto_import()
+```
+
 ## Usage
 
-Currently, the `ggbrokings` package only has a few simple user facing
+Currently, the `ggbrookings` package only has a few simple user facing
 functions:
 
 -   `theme_brookings()` overrides the default `ggplot2` theme for a
@@ -38,6 +48,9 @@ librarian::shelf(tidyverse, palmerpenguins, ggbrookings)
 
 ## Examples
 
+In order to match the Brookings style in scatterplots you should set
+`geom_point(size = 2)` as below:
+
 ``` r
   ggplot(data = penguins,
        aes(x = bill_length_mm,
@@ -45,20 +58,22 @@ librarian::shelf(tidyverse, palmerpenguins, ggbrookings)
            group = species)) +
   geom_point(aes(color = species,
                  shape = species),
-             size = 3,
+             size = 2,
              alpha = 0.8) +
   geom_smooth(method = "lm", se = FALSE, aes(color = species)) +
   theme_brookings() +
   scale_color_brookings(palette = "misc") +
   labs(title = "Penguin bill dimensions",
        subtitle = "Bill length and depth for Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER",
+       caption = '**Source:** Palmer Penguins',
+       tag = 'Figure 1',
        x = "Bill length (mm)",
        y = "Bill depth (mm)",
        color = "Penguin species",
-       shape = "Penguin species")
+       shape = "Penguin species") 
 ```
 
-<img src="man/figures/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 ``` r
   ggplot(data = penguins, aes(x = flipper_length_mm)) +
@@ -70,10 +85,12 @@ librarian::shelf(tidyverse, palmerpenguins, ggbrookings)
   theme_brookings() +
   labs(x = "Flipper length (mm)",
        y = "Frequency",
-       title = "Penguin flipper lengths")
+       title = "Penguin flipper lengths",
+       caption = '**Source:** Palmer Penguins',
+       tag = 'Figure 2')
 ```
 
-<img src="man/figures/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 
 You can change the size of your text proportionally by setting
 `theme_brookings(base_size = your_size)` as shown below:
@@ -82,21 +99,27 @@ You can change the size of your text proportionally by setting
   ggplot(penguins, aes(x = flipper_length_mm,
                      y = body_mass_g)) +
   geom_point(aes(color = sex),
+             size = 2,
              show.legend = FALSE) +
   theme_brookings() +
   scale_color_brookings('brand1', na.translate = FALSE) +
   labs(title = "Penguin flipper and body mass",
        subtitle = "Dimensions for <span style = 'color:#FF9E1B;'>**male**</span> and <span style = 'color:#003A79;'>**female**</span> Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER",
+       caption = '**Source:** Palmer Penguins',
+       tag = 'Figure 3',
        x = "Flipper length (mm)",
        y = "Body mass (g)",
        color = "Penguin sex") +
   facet_wrap(. ~ species, nrow = 3, ncol = 1)
 ```
 
-<img src="man/figures/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
+
+In order to match the Brookings style in line plots you should set
+`geom_line(size = 1.5)` as below:
 
 ``` r
-librarian::shelf(gapminder, ggtext)
+librarian::shelf(gapminder, ggtext, glue)
 
 gapminder_filtered <-
   gapminder %>% 
@@ -104,7 +127,7 @@ gapminder_filtered <-
 
 gapminder_filtered %>% 
   ggplot(aes(x = year, gdpPercap, color = country, label = country)) +
-  geom_line() +
+  geom_line(size = 1.5) +
   geom_label(data = gapminder_filtered %>% filter(year == last(year)), 
              aes(label = country, 
                  x = year + 3, 
@@ -119,11 +142,13 @@ gapminder_filtered %>%
                      limits = c(0, 15000), breaks = seq(0, 15000, 2500),
                      expand = expansion(0)) +
   scale_color_brookings() +
+  
+   
   labs(title = 'Economic growth in South America',
        subtitle = 'GDP per capita, 1952-2007',
+       caption = '**Source:** Gapminder',
        x = NULL, 
-       y = NULL, 
-       caption = '**Source:** Gapminder')
+       y = NULL) 
 ```
 
-<img src="man/figures/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
