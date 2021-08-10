@@ -11,31 +11,7 @@
 #' @rdname brookings_palettes
 #' @export
 brookings_colors <-
-  c(
-    `brookings blue` = '#003A79',
-    `vivid blue` = "#8AC6FF",
-    `brand_blue_90` = '#022A4E',
-    `brand blue 50` = "#517EAD",
-    `brand blue 20` = "#A8BDD5",
-    "teal" = "#3EB2C6",
-    `teal 40` = "#3EB2C6",
-    `dark red` = '#A00D11',
-    "red" = "#CD1A1C",
-    "light red" = "#F75C57",
-    "lighter red" = "#E254E",
-    "green" = "#5CA632",
-    `light blue` = '#A4C7F2',
-    `space gray` = "#D0D3D4",
-    'orange' = '#FF9E1B',
-    `orange 60` = '#F26D00',
-    black = "#101010",
-    gray = "#666666",
-    yellow = "#FFDD00",
-    `yellow 50` = "#F5CC00",
-    magenta = "#E160A2",
-    purple = "6E2585",
-    #022A4E
-
+  c(`brookings blue` = '#003A79',
     # Brand blue
     brand_blue_90 = '#022A4E',
     brand_blue_80 = '#003A70',
@@ -138,6 +114,7 @@ brookings_colors <-
     # Grey
     `PMS 427 C` = "#D0D3D4"
   )
+
 #' Function to extract brookings colors as hex codes
 #'
 #' @param ... Character names of Brookings_colors
@@ -152,7 +129,7 @@ brookings_cols <- function(...) {
 }
 
 #' @rdname brookings_palettes
-#' @export
+#'
 brookings_palettes <- list(
   # BRAND COLORS
   # Use colors from the brand palette whenever possible.
@@ -229,7 +206,7 @@ brookings_pal <- function(palette = "brand1", reverse = FALSE, ...) {
 #' \describe{
 #'   \item{Analogous}{Different shades of the same hue, or of similar hues can be used when the associated values are related.}
 #'   \item{Contrasting}{Colors on the opposite ends of the spectrum. Use Brookings Blue with Secondary colors.}
-#'   \item{Semantic}{Where applicable, use colors that are associated with certain concepts. For e.g., semantic1, semantic2, and semantic3 could show subsets of gender data (female, male and other)}.
+#'   \item{Semantic}{Where applicable, use colors that are associated with certain concepts. For e.g., semantic1, semantic2, and semantic3 could show subsets of gender data (female, male and other).}
 #'   \item{Positive & Negative}{Shows pros, cons and neutral, or positive, negative and neutral data.}
 #'   \item{Political}{Use red and blue of similar intensity to represent data related to political parties in the US. Yellow in political3 and political4 represents ‘Independent’ category}
 #'   \item{Misc}{A pleasing option using Brookings Blue and accent yellow.}

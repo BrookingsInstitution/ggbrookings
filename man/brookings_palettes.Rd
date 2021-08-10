@@ -6,7 +6,7 @@
 \alias{brookings_palettes}
 \title{Brookings Institution palettes}
 \format{
-An object of class \code{character} of length 104.
+An object of class \code{character} of length 83.
 
 An object of class \code{list} of length 20.
 }

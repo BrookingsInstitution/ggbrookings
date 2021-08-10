@@ -36,7 +36,7 @@ library(ggbrookings)
 ```
 
 ```{r, eval = FALSE}
-roboto_import()
+import_roboto()
 ```
 
 ## Usage
@@ -151,3 +151,4 @@ gapminder_filtered %>%
        y = NULL) 
   
 ```
+

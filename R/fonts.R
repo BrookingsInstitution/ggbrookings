@@ -1,11 +1,11 @@
 #' Import and register Roboto font
 #'
-#' \code{roboto_import()} tests to see if Roboto is imported and registered. If
-#' Roboto, isn't imported and registered, then \code{roboto_import()} imports and
+#' \code{import_roboto()} tests to see if Roboto is imported and registered. If
+#' Roboto, isn't imported and registered, then \code{import_roboto()} imports and
 #' registers Roboto with
 #' \href{https://github.com/wch/extrafont}{library(extrafont)}.
 #'
-#' Note: Roboto must be installed on your computer for \code{roboto_import()} to
+#' Note: Roboto must be installed on your computer for \code{import_roboto()} to
 #' work. Roboto is Brooking's main font. To install, visit
 #' \href{https://fonts.google.com/specimen/roboto}{Google fonts} and click
 #' "Download family". Unzip and open each of the .ttf files and click install.
@@ -14,7 +14,7 @@
 #'
 #' @md
 #' @export
-roboto_import <- function() {
+import_roboto <- function() {
 
   if (sum(grepl("[Rr]oboto$", extrafont::fonts())) > 0) {
 

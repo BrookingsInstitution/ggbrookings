@@ -148,13 +148,13 @@ theme_brookings <- function(base_size = 14,
       face = "bold",
       hjust = 0,
       vjust = 1,
-      margin = margin(b = half_line)
+      margin = margin(b = half_line / 2, t = base_size)
     ),
     plot.title.position = "plot",
     plot.subtitle =      ggtext::element_textbox_simple(
       # font size "regular"
       hjust = 0,
-
+      size = rel(1),
       vjust = 1,
       margin = margin(b = base_size)
     ),
@@ -168,13 +168,12 @@ theme_brookings <- function(base_size = 14,
     ),
     plot.caption.position = "plot",
     plot.tag =           element_text(
-      size = rel(1),
-      hjust = 0.5,
-      vjust = 0.5,
-      color = "#003A79",
-      margin = margin(b = half_line)
+      size = rel(0.8),
+      hjust = 0,
+      vjust = 1,
+      color = "#003A79"
     ),
-    plot.tag.position =  'topleft',
+    plot.tag.position =  c(0, 1),
     plot.margin =        margin(half_line, half_line, half_line, half_line),
 
     complete = FALSE
