@@ -13,6 +13,9 @@
     <loc>/articles/index.html</loc>
   </url>
   <url>
+    <loc>/articles/logos.html</loc>
+  </url>
+  <url>
     <loc>/articles/palettes.html</loc>
   </url>
   <url>
@@ -20,6 +23,9 @@
   </url>
   <url>
     <loc>/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/add_logo.html</loc>
   </url>
   <url>
     <loc>/reference/brookings_cols.html</loc>

@@ -24,7 +24,7 @@ of the .ttf files and click install. Finaly, run the code chunk below to
 ensure Roboto is imported and registered:
 
 ``` r
-roboto_import()
+import_roboto()
 ```
 
 ## Usage

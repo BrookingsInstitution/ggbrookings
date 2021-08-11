@@ -35,6 +35,9 @@ Color scales in the Brookings style
 \item{Semantic}{Where applicable, use colors that are associated with certain concepts. For e.g., semantic1, semantic2, and semantic3 could show subsets of gender data (female, male and other).}
 \item{Positive & Negative}{Shows pros, cons and neutral, or positive, negative and neutral data.}
 \item{Political}{Use red and blue of similar intensity to represent data related to political parties in the US. Yellow in political3 and political4 represents ‘Independent’ category}
+\item{Categorical}{Use categorical palettes to distinguish discrete categories of data that do not have an inherent ordering.}
+\item{Sequential}{Sequential palettes can be used to show an inherent order or variations in numeric values.}
+\item{Diverging}{Diverging palettes are useful when dealing with negative and positive values or a range of values that have two extremes with a baseline central value, like zero. The Brookings diverging palette should uses two distinct hues of similar brightness and saturation with a neutral color in the middle. Using a discrete set of colors with evenly distributed gradation can improve clarity of values relative to a continuous palette.}
 \item{Misc}{A pleasing option using Brookings Blue and accent yellow.}
 }
 }

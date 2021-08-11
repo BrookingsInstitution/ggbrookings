@@ -6,7 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>View brookings palettes — brookings_view_palette • ggbrookings</title>
+<title>Add a logo to your plot or image
+This function places a logo at one of the corners of your image/plot — add_logo • ggbrookings</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,8 +47,10 @@
 
 
 
-<meta property="og:title" content="View brookings palettes — brookings_view_palette" />
-<meta property="og:description" content="brookings_view_palette displays the colors and hexadecimal codes for colors in brookings palettes." />
+<meta property="og:title" content="Add a logo to your plot or image
+This function places a logo at one of the corners of your image/plot — add_logo" />
+<meta property="og:description" content="Add a logo to your plot or image
+This function places a logo at one of the corners of your image/plot" />
 <meta property="og:image" content="/logo.png" />
 
 
@@ -133,49 +136,51 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>View brookings palettes</h1>
-    <small class="dont-index">Source: <a href='https://github.com/Hutchins-Center/ggbrookings/blob/master/R/view_palette.R'><code>R/view_palette.R</code></a></small>
-    <div class="hidden name"><code>brookings_view_palette.Rd</code></div>
+    <h1>Add a logo to your plot or image
+This function places a logo at one of the corners of your image/plot</h1>
+    <small class="dont-index">Source: <a href='https://github.com/Hutchins-Center/ggbrookings/blob/master/R/add_logo.R'><code>R/add_logo.R</code></a></small>
+    <div class="hidden name"><code>add_logo.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p><code>brookings_view_palette</code> displays the colors and hexadecimal codes for colors in brookings palettes.</p>
+    <p>Add a logo to your plot or image
+This function places a logo at one of the corners of your image/plot</p>
     </div>
 
-    <div class="ref-usage sourceCode"><pre class='sourceCode r'><code><span class='fu'>brookings_view_palette</span><span class='op'>(</span>palette <span class='op'>=</span> <span class='st'>"brand1"</span><span class='op'>)</span></code></pre></div>
+    <div class="ref-usage sourceCode"><pre class='sourceCode r'><code><span class='fu'>add_logo</span><span class='op'>(</span>
+  <span class='va'>plot_path</span>,
+  logo_path <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"brookings"</span>, <span class='st'>"es"</span>, <span class='st'>"gs"</span>, <span class='st'>"fp"</span>, <span class='st'>"metro"</span>, <span class='st'>"global"</span>, <span class='st'>"bi"</span>, <span class='st'>"bc"</span>, <span class='st'>"cc"</span>,
+    <span class='st'>"ccf"</span>, <span class='st'>"ceaps"</span>, <span class='st'>"cepm"</span>, <span class='st'>"chp"</span>, <span class='st'>"cmep"</span>, <span class='st'>"csd"</span>, <span class='st'>"cti"</span>, <span class='st'>"crm"</span>, <span class='st'>"cue"</span>, <span class='st'>"cuse"</span>, <span class='st'>"doha"</span>,
+    <span class='st'>"hc"</span>, <span class='st'>"tsinghua"</span><span class='op'>)</span>,
+  logo_position <span class='op'>=</span> <span class='st'>"bottom left"</span>,
+  logo_scale <span class='op'>=</span> <span class='fl'>5</span>,
+  height_padding <span class='op'>=</span> <span class='fl'>0.045</span>,
+  width_padding <span class='op'>=</span> <span class='fl'>0.01</span>
+<span class='op'>)</span></code></pre></div>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>palette</th>
-      <td><p>Options are <code>brand1</code>, <code>brand2</code>, <code>analogous1</code>, <code>analogous2</code>, <code>contrasting1</code>, <code>contrasting2</code>, <code>gender1</code>, <code>gender2</code>, <code>gender3</code>, <code>pos_neg1</code>, <code>pos_neg2</code>, <code>political1</code>, <code>political2</code>, <code>political3</code>, <code>political4</code>, <code>categorical</code>, <code>sequential1</code>, <code>sequential2</code>, <code>diverging</code>, and <code>misc</code></p></td>
+      <th>plot_path</th>
+      <td><p>url or local file for the plot</p></td>
+    </tr>
+    <tr>
+      <th>logo_path</th>
+      <td><p>url, local file for the logo, or one of the built in logos.</p></td>
+    </tr>
+    <tr>
+      <th>width_padding</th>
+      <td></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="palettes"><a class="anchor" href="#palettes"></a>Palettes</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     
 
-<dl>
-<dt>Analogous</dt><dd><p>Different shades of the same hue, or of similar hues can be used when the associated values are related.</p></dd>
-<dt>Contrasting</dt><dd><p>Colors on the opposite ends of the spectrum. Use Brookings Blue with Secondary colors.</p></dd>
-<dt>Semantic</dt><dd><p>Where applicable, use colors that are associated with certain concepts. For e.g., semantic1, semantic2, and semantic3 could show subsets of gender data (female, male and other).</p></dd>
-<dt>Positive &amp; Negative</dt><dd><p>Shows pros, cons and neutral, or positive, negative and neutral data.</p></dd>
-<dt>Political</dt><dd><p>Use red and blue of similar intensity to represent data related to political parties in the US. Yellow in political3 and political4 represents ‘Independent’ category</p></dd>
-<dt>Misc</dt><dd><p>A pleasing option using Brookings Blue and accent yellow.</p></dd>
-
-</dl>
 
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <div class="ref-examples sourceCode"><pre class='sourceCode r'><code><span class='r-in'><span class='fu'>brookings_view_palette</span><span class='op'>(</span><span class='op'>)</span></span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "c(#FF9E1B, #8AC6FF, #003A79)"</span>
-<span class='r-in'><span class='fu'>brookings_view_palette</span><span class='op'>(</span><span class='st'>'brand1'</span><span class='op'>)</span></span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "c(#FF9E1B, #8AC6FF, #003A79)"</span>
-<span class='r-plt'><img src='brookings_view_palette-1.png' alt='' width='700' height='433' /></span>
-<span class='r-in'></span>
-</code></pre></div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

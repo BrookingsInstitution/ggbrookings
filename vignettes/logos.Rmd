@@ -1,8 +1,8 @@
 ---
-title: "logos"
+title: "Adding Logos"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{logos}
+  %\VignetteIndexEntry{Adding Logos}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -13,28 +13,29 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.width = 6,
   fig.asp = 0.618,
-  fig.align = 'center',
   out.width = '70%'
 )
 ```
 
+## Overview
+
 In order to add a logo you should create your plot, save it, and then use `add_logo()`.
 The function takes on six arguments:
 
--   plot_path: url or local file for the plot
+-   `plot_path`: url or local file for the plot
 
--   logo_path: url, local file for the plot or one of the built in logos.
+-   `logo_path`: url, local file for the plot or one of the built in logos.
 
--   logo_position: Can be 'top left', 'top right', 'bottom left', and 'bottom right'.
+-   `logo_position`: Can be 'top left', 'top right', 'bottom left', and 'bottom right'.
     As per the Brookings style guide, the default logo position is 'bottom right'.
 
--   logo_scale: The portion of the plot width the logo should occupy.
+-   `logo_scale`: The portion of the plot width the logo should occupy.
     The default is 5 which means that the logo will be 1/5th of the plot width.
 
--   height_padding: Control the y axis position of a logo by specifying the padding proportion.
+-   `height_padding`: Control the y axis position of a logo by specifying the padding proportion.
     Default is 4.5% padding.
 
--   width_padding: Control the x axis position of a logo by specifying the padding proportion.
+-   `width_padding`: Control the x axis position of a logo by specifying the padding proportion.
     Default is 1% padding.
 
 Currently, the available built in logos are:
@@ -90,6 +91,8 @@ Currently, the available built in logos are:
 For more information on how this function works, please read Tom Mock's fantastic blog post on [how to add a logo to your plot](https://themockup.blog/posts/2019-01-09-add-a-logo-to-your-plot/).
 `ggbrookings::add_logo()` builds off of the function described in the article with some minor modifications.
 
+## Example
+
 We start by creating a plot and using `ggsave()` to save it.
 
 ```{r, eval = TRUE}
@@ -114,7 +117,7 @@ ggsave("penguins.png", p1, dpi=300, height=3.7, width=6, units="in")
 
 ```
 
-Finally, to add a logo we can call:
+Finally, to add a logo call:
 
 ```{r, out.width='70%', fig.align='center'}
 
