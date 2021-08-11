@@ -41,7 +41,7 @@ theme_brookings <- function(base_size = 14,
       ),
     rect =
       element_rect(
-        fill = "#FAFAFA",
+        fill = NULL,
         colour = "black",
         size = base_rect_size,
         linetype = 1
@@ -140,7 +140,7 @@ theme_brookings <- function(base_size = 14,
     # strip.switch.pad.grid = unit(half_line / 2, "pt"),
     # strip.switch.pad.wrap = unit(half_line / 2, "pt"),
 
-    plot.background =    element_rect(colour = "#FAFAFA"),
+    plot.background =    element_rect(colour = "transparent"),
     plot.title =         ggtext::element_textbox_simple(
       # font size "large"
       size = rel(1.2),
@@ -174,7 +174,8 @@ theme_brookings <- function(base_size = 14,
       color = "#003A79"
     ),
     plot.tag.position =  c(0, 1),
-    plot.margin =        margin(half_line, half_line, half_line, half_line),
+     plot.margin =        margin(half_line, half_line, half_line * 2, half_line),
+    # plot.margin = unit(c(0.5, 0.5, 2.5, 0.5), "lines"),
 
     complete = FALSE
   )

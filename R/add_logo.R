@@ -1,14 +1,17 @@
-#' Add logo
-#'
-#' @param plot_path
-#' @param logo_path
+#' Add a logo to your plot or image
+#' This function places a logo at one of the corners of your image/plot
+#' @param plot_path url or local file for the plot
+#' @param logo_path url, local file for the logo, or one of the built in logos.
 #' @param logo_position
 #' @param logo_scale
+#' @param heigh_padding
+#' @param width_padding
 #'
 #' @return
 #' @export
+#' @import magick
 #'
-add_logo <- function(plot_path, logo_path, logo_position, logo_scale = 10){
+add_logo <- function(plot_path, logo_path =  c('brookings','es', 'gs', 'fp', 'metro', 'global', 'bi', 'bc', 'cc', 'ccf', 'ceaps', 'cepm', 'chp', 'cmep', 'csd', 'cti', 'crm', 'cue', 'cuse', 'doha', 'hc', 'tsinghua'), logo_position = 'bottom left', logo_scale = 5, height_padding = 0.045, width_padding = 0.01){
 
   # Requires magick R Package https://github.com/ropensci/magick
 
@@ -17,6 +20,14 @@ add_logo <- function(plot_path, logo_path, logo_position, logo_scale = 10){
     stop("Error Message: Uh oh! Logo Position not recognized\n  Try: logo_positon = 'top left', 'top right', 'bottom left', or 'bottom right'")
   }
 
+
+  if(logo_path %in% c('brookings','es', 'gs', 'fp', 'metro', 'global', 'bi', 'bc', 'cc', 'ccf', 'ceaps', 'cepm', 'chp', 'cmep', 'csd', 'cti', 'crm', 'cue', 'cuse', 'doha', 'hc', 'tsinghua')){
+    logo_path <- match.arg(logo_path)
+
+    logo_path <- system.file(package = 'ggbrookings', glue::glue('logos/{logo_path}.png'))
+  } else{
+    logo_path
+  }
   # read in raw images
   plot <- magick::image_read(plot_path)
   logo_raw <- magick::image_read(logo_path)
@@ -38,17 +49,17 @@ add_logo <- function(plot_path, logo_path, logo_position, logo_scale = 10){
   # Using 0.01 for 1% - aesthetic padding
 
   if (logo_position == "top right") {
-    x_pos = plot_width - logo_width - 0.01 * plot_width
-    y_pos = 0.01 * plot_height
+    x_pos = plot_width - logo_width - width_padding * plot_width
+    y_pos = height_padding * plot_height
   } else if (logo_position == "top left") {
-    x_pos = 0.01 * plot_width
-    y_pos = 0.01 * plot_height
+    x_pos = width_padding * plot_width
+    y_pos = height_padding * plot_height
   } else if (logo_position == "bottom right") {
-    x_pos = plot_width - logo_width - 0.01 * plot_width
-    y_pos = plot_height - logo_height - 0.01 * plot_height
+    x_pos = plot_width - logo_width - width_padding * plot_width
+    y_pos = plot_height - logo_height - height_padding * plot_height
   } else if (logo_position == "bottom left") {
-    x_pos = 0.01 * plot_width
-    y_pos = plot_height - logo_height - 0.01 * plot_height
+    x_pos = width_padding * plot_width
+    y_pos = plot_height - logo_height - height_padding * plot_height
   }
 
   # Compose the actual overlay
