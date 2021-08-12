@@ -21,7 +21,13 @@ add_logo(
 
 \item{logo_path}{url, local file for the logo, or one of the built in logos.}
 
-\item{width_padding}{}
+\item{logo_position}{Optional. Valid options are 'top left', 'top right', 'bottom left', and 'bottom right'. Default logo position is 'bottom right'.}
+
+\item{logo_scale}{Optional. The portion of the plot width the logo should occupy. The default is 5 which means that the logo will be 1/5th of the plot width.}
+
+\item{height_padding}{Optional. Control the y axis position of a logo by specifying the padding proportion. Default is 4.5\% padding.}
+
+\item{width_padding}{Optional. Control the x axis position of a logo by specifying the padding proportion. Default is 1\% padding.}
 }
 \value{
 
