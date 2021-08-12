@@ -1,12 +1,13 @@
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# ggbrookings <img src="man/figures/logo.png" align="right" width="120"/>
+
 ## Overview
 
 `ggbrookings` is a `ggplot2` extension which implements the Brookings
 style guide using `ggplot2`. It offers several color palettes, a custom
 theme, and a few helper functions.
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# ggbrookings <img src="man/figures/logo.png" align="right" width="120"/>
 
 ## Installation
 
@@ -50,11 +51,12 @@ functions:
 -   `brookings_view_palette()` is a helper function to see the colors
     from each palette and extract their hex codes.
 
+## Examples
+
 ``` r
+# Load the necessary libraries
 librarian::shelf(tidyverse, palmerpenguins, ggbrookings)
 ```
-
-## Examples
 
 ### Scatterplot
 
@@ -83,7 +85,7 @@ In order to match the Brookings style in scatterplots you should set
        shape = "Penguin species") 
 ```
 
-<img src="man/figures/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 
 ### Histogram
 
@@ -102,7 +104,7 @@ In order to match the Brookings style in scatterplots you should set
        tag = 'Figure 2')
 ```
 
-<img src="man/figures/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
 
 You can change the size of your text proportionally by setting
 `theme_brookings(base_size = your_size)` as shown below:
@@ -127,7 +129,7 @@ You can change the size of your text proportionally by setting
   facet_wrap(. ~ species, nrow = 3, ncol = 1)
 ```
 
-<img src="man/figures/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
 ### Line plot
 
@@ -167,4 +169,4 @@ gapminder_filtered %>%
        y = NULL) 
 ```
 
-<img src="man/figures/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-9-1.png" style="display: block; margin: auto;" />

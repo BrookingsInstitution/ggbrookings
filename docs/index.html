@@ -84,16 +84,15 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-
-<div id="overview" class="section level2">
-<h2 class="hasAnchor">
-<a href="#overview" class="anchor" aria-hidden="true"></a>Overview</h2>
-<p><code>ggbrookings</code> is a <code>ggplot2</code> extension which implements the Brookings style guide using <code>ggplot2</code>. It offers several color palettes, a custom theme, and a few helper functions. <!-- README.md is generated from README.Rmd. Please edit that file --></p>
-</div>
 <div id="ggbrookings-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#ggbrookings-" class="anchor" aria-hidden="true"></a>ggbrookings <img src="reference/figures/logo.png" align="right" width="120">
 </h1></div>
+<div id="overview" class="section level2">
+<h2 class="hasAnchor">
+<a href="#overview" class="anchor" aria-hidden="true"></a>Overview</h2>
+<p><code>ggbrookings</code> is a <code>ggplot2</code> extension which implements the Brookings style guide using <code>ggplot2</code>. It offers several color palettes, a custom theme, and a few helper functions.</p>
+</div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor" aria-hidden="true"></a>Installation</h2>
@@ -117,12 +116,13 @@
 <li><p><code><a href="reference/scales_brookings.html">scale_color_brookings()</a></code> and <code><a href="reference/scales_brookings.html">scale_fill_brookings()</a></code> provide several color palettes that are consistent with the Brookings brand and designed to provide color accessiblity.</p></li>
 <li><p><code><a href="reference/brookings_view_palette.html">brookings_view_palette()</a></code> is a helper function to see the colors from each palette and extract their hex codes.</p></li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">librarian</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/librarian/man/shelf.html" class="external-link">shelf</a></span><span class="op">(</span><span class="va">tidyverse</span>, <span class="va">palmerpenguins</span>, <span class="va">ggbrookings</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="examples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor" aria-hidden="true"></a>Examples</h2>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Load the necessary libraries</span>
+<span class="fu">librarian</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/librarian/man/shelf.html" class="external-link">shelf</a></span><span class="op">(</span><span class="va">tidyverse</span>, <span class="va">palmerpenguins</span>, <span class="va">ggbrookings</span><span class="op">)</span></code></pre></div>
 <div id="scatterplot" class="section level3">
 <h3 class="hasAnchor">
 <a href="#scatterplot" class="anchor" aria-hidden="true"></a>Scatterplot</h3>
@@ -147,7 +147,7 @@
        y <span class="op">=</span> <span class="st">"Bill depth (mm)"</span>,
        color <span class="op">=</span> <span class="st">"Penguin species"</span>,
        shape <span class="op">=</span> <span class="st">"Penguin species"</span><span class="op">)</span> </code></pre></div>
-<p><img src="reference/figures/unnamed-chunk-5-1.png" style="display: block; margin: auto;"></p>
+<p><img src="reference/figures/unnamed-chunk-6-1.png" style="display: block; margin: auto;"></p>
 </div>
 <div id="histogram" class="section level3">
 <h3 class="hasAnchor">
@@ -165,7 +165,7 @@
        title <span class="op">=</span> <span class="st">"Penguin flipper lengths"</span>,
        caption <span class="op">=</span> <span class="st">'**Source:** Palmer Penguins'</span>,
        tag <span class="op">=</span> <span class="st">'Figure 2'</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/unnamed-chunk-6-1.png" style="display: block; margin: auto;"></p>
+<p><img src="reference/figures/unnamed-chunk-7-1.png" style="display: block; margin: auto;"></p>
 <p>You can change the size of your text proportionally by setting <code>theme_brookings(base_size = your_size)</code> as shown below:</p>
 </div>
 <div id="faceting" class="section level3">
@@ -187,7 +187,7 @@
        y <span class="op">=</span> <span class="st">"Body mass (g)"</span>,
        color <span class="op">=</span> <span class="st">"Penguin sex"</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">facet_wrap</span><span class="op">(</span><span class="va">.</span> <span class="op">~</span> <span class="va">species</span>, nrow <span class="op">=</span> <span class="fl">3</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/unnamed-chunk-7-1.png" style="display: block; margin: auto;"></p>
+<p><img src="reference/figures/unnamed-chunk-8-1.png" style="display: block; margin: auto;"></p>
 </div>
 <div id="line-plot" class="section level3">
 <h3 class="hasAnchor">
@@ -224,11 +224,10 @@
        caption <span class="op">=</span> <span class="st">'**Source:** Gapminder'</span>,
        x <span class="op">=</span> <span class="cn">NULL</span>, 
        y <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span> </code></pre></div>
-<p><img src="reference/figures/unnamed-chunk-8-1.png" style="display: block; margin: auto;"></p>
+<p><img src="reference/figures/unnamed-chunk-9-1.png" style="display: block; margin: auto;"></p>
 </div>
 </div>
 </div>
-
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

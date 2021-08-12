@@ -2,11 +2,14 @@
 output: github_document
 ---
 
-## Overview
-`ggbrookings` is a `ggplot2` extension which implements the Brookings style guide using `ggplot2`. It offers several color palettes, a custom theme, and a few helper functions.
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # ggbrookings <img src="man/figures/logo.png" align="right" width="120"/>
+
+
+## Overview
+`ggbrookings` is a `ggplot2` extension which implements the Brookings style guide using `ggplot2`. It offers several color palettes, a custom theme, and a few helper functions.
+
 
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>", warning = FALSE,
@@ -52,11 +55,12 @@ Currently, the `ggbrookings` package only has a few simple user facing functions
 
 -   `brookings_view_palette()` is a helper function to see the colors from each palette and extract their hex codes.
 
-```{r setup}
-librarian::shelf(tidyverse, palmerpenguins, ggbrookings)
-```
 
 ## Examples
+```{r}
+# Load the necessary libraries
+librarian::shelf(tidyverse, palmerpenguins, ggbrookings)
+```
 
 ### Scatterplot
 In order to match the Brookings style in scatterplots you should set `geom_point(size = 2)` as below:
