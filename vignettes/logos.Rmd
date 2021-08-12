@@ -26,67 +26,71 @@ The function takes on six arguments:
 
 -   `logo_path`: url, local file for the plot or one of the built in logos.
 
--   `logo_position`: Can be 'top left', 'top right', 'bottom left', and 'bottom right'.
+-   `logo_position`: Optional argument.
+    Can be 'top left', 'top right', 'bottom left', and 'bottom right'.
     As per the Brookings style guide, the default logo position is 'bottom right'.
 
--   `logo_scale`: The portion of the plot width the logo should occupy.
+-   `logo_scale`: Optional argument.
+    The portion of the plot width the logo should occupy.
     The default is 5 which means that the logo will be 1/5th of the plot width.
 
--   `height_padding`: Control the y axis position of a logo by specifying the padding proportion.
+-   `height_padding`: Optional argument.
+    Control the y axis position of a logo by specifying the padding proportion.
     Default is 4.5% padding.
 
--   `width_padding`: Control the x axis position of a logo by specifying the padding proportion.
+-   `width_padding`: Optional argument.
+    Control the x axis position of a logo by specifying the padding proportion.
     Default is 1% padding.
 
 Currently, the available built in logos are:
 
-+----------------------------------------------+--------------------------------+
-| Program/Center                               | Abbreviation                   |
-+:=============================================+:===============================+
-| Brookings                                    | 'brookings'                    |
-+----------------------------------------------+--------------------------------+
-| Economic Studies                             | 'es'                           |
-+----------------------------------------------+--------------------------------+
-| Government Studies                           | 'gs'                           |
-+----------------------------------------------+--------------------------------+
-| Foreign Policy                               | 'fp'                           |
-+----------------------------------------------+--------------------------------+
-| Metro                                        | 'metro'                        |
-+----------------------------------------------+--------------------------------+
-| Global                                       | 'global'                       |
-+----------------------------------------------+--------------------------------+
-| Bass Initiative                              | 'bi'                           |
-+----------------------------------------------+--------------------------------+
-| Brown Center                                 | 'bc'                           |
-+----------------------------------------------+--------------------------------+
-| China Center                                 | 'cc'                           |
-+----------------------------------------------+--------------------------------+
-| Center for Children and Families             | 'ccf'                          |
-+----------------------------------------------+--------------------------------+
-| Center for East Asia Policy Studies          | 'ceaps'                        |
-+----------------------------------------------+--------------------------------+
-| Center for Effective Public Management       | 'cepm'                         |
-+----------------------------------------------+--------------------------------+
-| Center for Health Policy                     | 'chp'                          |
-+----------------------------------------------+--------------------------------+
-| Center for Middle East Policy                | 'cmep'                         |
-+----------------------------------------------+--------------------------------+
-| Center for Sustainable Development           | 'csd'                          |
-+----------------------------------------------+--------------------------------+
-| Center for Technology Innovation             | 'cti'                          |
-+----------------------------------------------+--------------------------------+
-| Center for Universal Education               | 'cue'                          |
-+----------------------------------------------+--------------------------------+
-| Center on United States and Europe           | 'cuse'                         |
-+----------------------------------------------+--------------------------------+
-| Center on Regulation and Markets             | 'crm'                          |
-+----------------------------------------------+--------------------------------+
-| Doha Center                                  | 'doha'                         |
-+----------------------------------------------+--------------------------------+
-| Hutchins Center                              | 'hc'                           |
-+----------------------------------------------+--------------------------------+
-| Brookings-Tsinghua Center for Public Policy  | 'tsinghua'                     |
-+----------------------------------------------+--------------------------------+
++---------------------------------------------+----------------------------+
+| Program/Center                              | Abbreviation               |
++:============================================+:===========================+
+| Brookings                                   | 'brookings'                |
++---------------------------------------------+----------------------------+
+| Economic Studies                            | 'es'                       |
++---------------------------------------------+----------------------------+
+| Government Studies                          | 'gs'                       |
++---------------------------------------------+----------------------------+
+| Foreign Policy                              | 'fp'                       |
++---------------------------------------------+----------------------------+
+| Metro                                       | 'metro'                    |
++---------------------------------------------+----------------------------+
+| Global                                      | 'global'                   |
++---------------------------------------------+----------------------------+
+| Bass Initiative                             | 'bi'                       |
++---------------------------------------------+----------------------------+
+| Brown Center                                | 'bc'                       |
++---------------------------------------------+----------------------------+
+| China Center                                | 'cc'                       |
++---------------------------------------------+----------------------------+
+| Center for Children and Families            | 'ccf'                      |
++---------------------------------------------+----------------------------+
+| Center for East Asia Policy Studies         | 'ceaps'                    |
++---------------------------------------------+----------------------------+
+| Center for Effective Public Management      | 'cepm'                     |
++---------------------------------------------+----------------------------+
+| Center for Health Policy                    | 'chp'                      |
++---------------------------------------------+----------------------------+
+| Center for Middle East Policy               | 'cmep'                     |
++---------------------------------------------+----------------------------+
+| Center for Sustainable Development          | 'csd'                      |
++---------------------------------------------+----------------------------+
+| Center for Technology Innovation            | 'cti'                      |
++---------------------------------------------+----------------------------+
+| Center for Universal Education              | 'cue'                      |
++---------------------------------------------+----------------------------+
+| Center on United States and Europe          | 'cuse'                     |
++---------------------------------------------+----------------------------+
+| Center on Regulation and Markets            | 'crm'                      |
++---------------------------------------------+----------------------------+
+| Doha Center                                 | 'doha'                     |
++---------------------------------------------+----------------------------+
+| Hutchins Center                             | 'hc'                       |
++---------------------------------------------+----------------------------+
+| Brookings-Tsinghua Center for Public Policy | 'tsinghua'                 |
++---------------------------------------------+----------------------------+
 
 For more information on how this function works, please read Tom Mock's fantastic blog post on [how to add a logo to your plot](https://themockup.blog/posts/2019-01-09-add-a-logo-to-your-plot/).
 `ggbrookings::add_logo()` builds off of the function described in the article with some minor modifications.

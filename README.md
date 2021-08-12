@@ -1,4 +1,9 @@
 
+## Overview
+
+`ggbrookings` is a `ggplot2` extension which implements the Brookings
+style guide using `ggplot2`. It offers several color palettes, a custom
+theme, and a few helper functions.
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # ggbrookings <img src="man/figures/logo.png" align="right" width="120"/>
@@ -18,10 +23,13 @@ Sys.setenv(TZ = 'UTC')
 ```
 
 **Roboto** is Brooking’s main font. You will need to install it by
-visiting [Google fonts](https://fonts.google.com/specimen/roboto) and
-clicking “Download family”. Once you’ve done this, unzip and open each
-of the .ttf files and click install. Finaly, run the code chunk below to
-ensure Roboto is imported and registered:
+visiting [Google
+fonts](https://fonts.google.com/specimen/Roboto?query=Roboto) and
+clicking “Download family”.
+
+Once you’ve done this, unzip and open each of the .ttf files and click
+install. Finaly, run the code chunk below to ensure Roboto is imported
+and registered:
 
 ``` r
 import_roboto()
@@ -47,6 +55,8 @@ librarian::shelf(tidyverse, palmerpenguins, ggbrookings)
 ```
 
 ## Examples
+
+### Scatterplot
 
 In order to match the Brookings style in scatterplots you should set
 `geom_point(size = 2)` as below:
@@ -75,6 +85,8 @@ In order to match the Brookings style in scatterplots you should set
 
 <img src="man/figures/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
+### Histogram
+
 ``` r
   ggplot(data = penguins, aes(x = flipper_length_mm)) +
   geom_histogram(aes(fill = species),
@@ -95,6 +107,8 @@ In order to match the Brookings style in scatterplots you should set
 You can change the size of your text proportionally by setting
 `theme_brookings(base_size = your_size)` as shown below:
 
+### Faceting
+
 ``` r
   ggplot(penguins, aes(x = flipper_length_mm,
                      y = body_mass_g)) +
@@ -114,6 +128,8 @@ You can change the size of your text proportionally by setting
 ```
 
 <img src="man/figures/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
+
+### Line plot
 
 In order to match the Brookings style in line plots you should set
 `geom_line(size = 1.5)` as below:

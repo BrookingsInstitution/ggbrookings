@@ -2,10 +2,10 @@
 #' This function places a logo at one of the corners of your image/plot
 #' @param plot_path url or local file for the plot
 #' @param logo_path url, local file for the logo, or one of the built in logos.
-#' @param logo_position
-#' @param logo_scale
-#' @param heigh_padding
-#' @param width_padding
+#' @param logo_position Optional. Valid options are 'top left', 'top right', 'bottom left', and 'bottom right'. Default logo position is 'bottom right'.
+#' @param logo_scale Optional. The portion of the plot width the logo should occupy. The default is 5 which means that the logo will be 1/5th of the plot width.
+#' @param height_padding Optional. Control the y axis position of a logo by specifying the padding proportion. Default is 4.5% padding.
+#' @param width_padding Optional. Control the x axis position of a logo by specifying the padding proportion. Default is 1% padding.
 #'
 #' @return
 #' @export
