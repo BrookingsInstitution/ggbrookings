@@ -6,10 +6,10 @@ output: github_document
 
 # ggbrookings <img src="man/figures/logo.png" align="right" width="120"/>
 
-
 ## Overview
-`ggbrookings` is a `ggplot2` extension which implements the Brookings style guide using `ggplot2`. It offers several color palettes, a custom theme, and a few helper functions.
 
+`ggbrookings` is a `ggplot2` extension which implements the Brookings style guide using `ggplot2`.
+It offers several color palettes, a custom theme, and a few helper functions.
 
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>", warning = FALSE,
@@ -55,15 +55,18 @@ Currently, the `ggbrookings` package only has a few simple user facing functions
 
 -   `brookings_view_palette()` is a helper function to see the colors from each palette and extract their hex codes.
 
-- `add_logo()` adds a program/center logo to your plots after saving them. See the vignette on adding logos for more details.
+-   `add_logo()` adds a program/center logo to your plots after saving them.
+    See the [vignette on adding logos](https://brookingsinstitution.github.io/ggbrookings/articles/logos.html) for more details.
 
 ## Examples
+
 ```{r}
 # Load the necessary libraries
 librarian::shelf(tidyverse, palmerpenguins, ggbrookings)
 ```
 
 ### Scatterplot
+
 In order to match the Brookings style in scatterplots you should set `geom_point(size = 2)` as below:
 
 ```{r}
@@ -90,6 +93,7 @@ In order to match the Brookings style in scatterplots you should set `geom_point
 ```
 
 ### Histogram
+
 ```{r }
   ggplot(data = penguins, aes(x = flipper_length_mm)) +
   geom_histogram(aes(fill = species),
@@ -109,6 +113,7 @@ In order to match the Brookings style in scatterplots you should set `geom_point
 You can change the size of your text proportionally by setting `theme_brookings(base_size = your_size)` as shown below:
 
 ### Faceting
+
 ```{r}
   ggplot(penguins, aes(x = flipper_length_mm,
                      y = body_mass_g)) +
@@ -128,6 +133,7 @@ You can change the size of your text proportionally by setting `theme_brookings(
 ```
 
 ### Line plot
+
 In order to match the Brookings style in line plots you should set `geom_line(size = 1.5)` as below:
 
 ```{r}
@@ -163,4 +169,3 @@ gapminder_filtered %>%
        y = NULL) 
   
 ```
-
