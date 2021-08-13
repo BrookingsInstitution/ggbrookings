@@ -55,6 +55,7 @@ Currently, the `ggbrookings` package only has a few simple user facing functions
 
 -   `brookings_view_palette()` is a helper function to see the colors from each palette and extract their hex codes.
 
+- `add_logo()` adds a program/center logo to your plots after saving them. See the vignette on adding logos for more details.
 
 ## Examples
 ```{r}

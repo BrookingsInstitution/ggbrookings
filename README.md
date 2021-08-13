@@ -13,7 +13,7 @@ theme, and a few helper functions.
 
 ``` r
 install.packages("devtools")
-devtools::install_github("Hutchins-Center/ggbrookings", build_vignettes = TRUE)
+devtools::install_github("BrookingsInstitution/ggbrookings", build_vignettes = TRUE)
 ```
 
 **Note:** If you are on a Brookings laptop, you may need to change your
@@ -50,6 +50,9 @@ functions:
 
 -   `brookings_view_palette()` is a helper function to see the colors
     from each palette and extract their hex codes.
+
+-   `add_logo()` adds a program/center logo to your plots after saving
+    them. See the vignette on adding logos for more details.
 
 ## Examples
 
