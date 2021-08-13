@@ -90,7 +90,7 @@ In order to match the Brookings style in scatterplots you should set
        shape = "Penguin species") 
 ```
 
-<img src="man/figures/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-6-1.png" width="2100" style="display: block; margin: auto;" />
 
 ### Histogram
 
@@ -109,7 +109,7 @@ In order to match the Brookings style in scatterplots you should set
        tag = 'FIGURE 2')
 ```
 
-<img src="man/figures/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-7-1.png" width="2100" style="display: block; margin: auto;" />
 
 You can change the size of your text proportionally by setting
 `theme_brookings(base_size = your_size)` as shown below:
@@ -134,7 +134,7 @@ You can change the size of your text proportionally by setting
   facet_wrap(. ~ species, nrow = 3, ncol = 1)
 ```
 
-<img src="man/figures/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-8-1.png" width="2100" style="display: block; margin: auto;" />
 
 ### Line plot
 
@@ -175,4 +175,4 @@ gapminder_filtered %>%
        y = NULL) 
 ```
 
-<img src="man/figures/unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-9-1.png" width="2100" style="display: block; margin: auto;" />

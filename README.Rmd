@@ -14,7 +14,9 @@ It offers several color palettes, a custom theme, and a few helper functions.
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>", warning = FALSE,
                       message = FALSE, 
-                      fig.path = "man/figures/", fig.align = "center")
+                      fig.path = "man/figures/", fig.align = "center",
+                      dpi = 300,
+                      fig.retina = 2)
 ```
 
 ## Installation
