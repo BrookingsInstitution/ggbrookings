@@ -83,7 +83,7 @@ In order to match the Brookings style in scatterplots you should set
   labs(title = "Penguin bill dimensions",
        subtitle = "Bill length and depth for Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER",
        caption = '**Source:** Palmer Penguins',
-       tag = 'Figure 1',
+       tag = 'FIGURE 1',
        x = "Bill length (mm)",
        y = "Bill depth (mm)",
        color = "Penguin species",
@@ -106,7 +106,7 @@ In order to match the Brookings style in scatterplots you should set
        y = "Frequency",
        title = "Penguin flipper lengths",
        caption = '**Source:** Palmer Penguins',
-       tag = 'Figure 2')
+       tag = 'FIGURE 2')
 ```
 
 <img src="man/figures/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
@@ -127,7 +127,7 @@ You can change the size of your text proportionally by setting
   labs(title = "Penguin flipper and body mass",
        subtitle = "Dimensions for <span style = 'color:#FF9E1B;'>**male**</span> and <span style = 'color:#003A79;'>**female**</span> Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER",
        caption = '**Source:** Palmer Penguins',
-       tag = 'Figure 3',
+       tag = 'FIGURE 3',
        x = "Flipper length (mm)",
        y = "Body mass (g)",
        color = "Penguin sex") +
@@ -170,6 +170,7 @@ gapminder_filtered %>%
   labs(title = 'Economic growth in South America',
        subtitle = 'GDP per capita, 1952-2007',
        caption = '**Source:** Gapminder',
+       tag = 'FIGURE 4',
        x = NULL, 
        y = NULL) 
 ```
