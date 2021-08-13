@@ -6,8 +6,8 @@
 ## Overview
 
 `ggbrookings` is a `ggplot2` extension which implements the Brookings
-style guide using `ggplot2`. It offers several color palettes, a custom
-theme, and a few helper functions.
+style guide. It offers several color palettes, a custom theme, and a few
+helper functions.
 
 ## Installation
 
