@@ -52,7 +52,9 @@ functions:
     from each palette and extract their hex codes.
 
 -   `add_logo()` adds a program/center logo to your plots after saving
-    them. See the vignette on adding logos for more details.
+    them. See the [vignette on adding
+    logos](https://brookingsinstitution.github.io/ggbrookings/articles/logos.html)
+    for more details.
 
 ## Examples
 
