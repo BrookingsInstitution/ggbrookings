@@ -17,7 +17,8 @@ BugReports: https://github.com/BrookingsInstitution/ggbrookings/issues
 RoxygenNote: 7.1.1
 Imports: 
     ggplot2,
-    ggtext
+    ggtext,
+    magick
 Suggests: 
     rmarkdown,
     knitr
