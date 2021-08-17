@@ -19,7 +19,7 @@ add_logo(
 \arguments{
 \item{plot_path}{url or local file for the plot}
 
-\item{logo_path}{url, local file for the logo, or one of the built in logos.}
+\item{logo_path}{url, local file for the logo, or one of the built in logos. Can be a character string in c('brookings','es', 'gs', 'fp', 'metro', 'global', 'bi', 'bc', 'cc', 'ccf', 'ceaps', 'cepm', 'chp', 'cmep', 'csd', 'cti', 'crm', 'cue', 'cuse', 'doha', 'hc', 'tsinghua')}
 
 \item{logo_position}{Optional. Valid options are 'top left', 'top right', 'bottom left', and 'bottom right'. Default logo position is 'bottom right'.}
 

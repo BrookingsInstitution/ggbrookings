@@ -17,6 +17,4 @@ Note: Roboto must be installed on your computer for \code{import_roboto()} to
 work. Roboto is Brooking's main font. To install, visit
 \href{https://fonts.google.com/specimen/roboto}{Google fonts} and click
 "Download family". Unzip and open each of the .ttf files and click install.
-
-Test to see if roboto is imported and registered with \code{roboto_test()}.
 }

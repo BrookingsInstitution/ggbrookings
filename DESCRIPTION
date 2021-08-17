@@ -16,9 +16,11 @@ URL: https://brookingsinstitution.github.io/ggbrookings/, https://github.com/Bro
 BugReports: https://github.com/BrookingsInstitution/ggbrookings/issues
 RoxygenNote: 7.1.1
 Imports: 
+    extrafont,
     ggplot2,
     ggtext,
-    magick
+    magick,
+    systemfonts
 Suggests: 
     rmarkdown,
     knitr

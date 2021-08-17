@@ -10,7 +10,6 @@
 #' \href{https://fonts.google.com/specimen/roboto}{Google fonts} and click
 #' "Download family". Unzip and open each of the .ttf files and click install.
 #'
-#' Test to see if roboto is imported and registered with \code{roboto_test()}.
 #'
 #' @md
 #' @export
@@ -37,8 +36,6 @@ import_roboto <- function() {
     # register the fonts
     extrafont::loadfonts()
 
-    # test to confirm that roboto is imported and registered
-    roboto_test()
 
   }
 
