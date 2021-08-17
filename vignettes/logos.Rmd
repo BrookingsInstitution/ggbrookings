@@ -126,3 +126,12 @@ Finally, to add a logo call:
 ```{r, out.width='70%', fig.align='center'}
 add_logo('penguins.png', logo_path = 'brookings', 'bottom right', 5)
 ```
+
+The image will show up in your viewer point. To save it as a png you can right click on it and select "Save Image As..." or, more reproducibly, assign it to an object and then call `magick::image_write()` as below:
+
+```{r}
+penguins <- add_logo('penguins.png', logo_path = 'brookings', 'bottom right', 5)
+ 
+magick::image_write(penguins, "penguins.png")
+```
+
