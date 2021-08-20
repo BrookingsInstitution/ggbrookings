@@ -11,9 +11,12 @@ helper functions.
 
 ## Installation
 
+In order to install packages from GitHub you first need to install
+`remotes`.
+
 ``` r
-install.packages("devtools")
-devtools::install_github("BrookingsInstitution/ggbrookings", build_vignettes = TRUE)
+install.packages("remotes")
+remotes::install_github("BrookingsInstitution/ggbrookings", build_vignettes = TRUE)
 ```
 
 **Note:** If you are on a Brookings laptop, you may need to change your
@@ -22,6 +25,8 @@ timezone for `devtools` to work. This can be done by running:
 ``` r
 Sys.setenv(TZ = 'UTC')
 ```
+
+## Fonts
 
 **Roboto** is Brooking’s main font. You will need to install it by
 visiting [Google
@@ -34,6 +39,15 @@ and registered:
 
 ``` r
 import_roboto()
+```
+
+If you run into any problems while installing fonts on a Windows
+computer try the following solution from this
+[issue](https://github.com/wch/extrafont/issues/88):
+
+``` r
+remove.packages("Rttf2pt1")
+remotes::install_version("Rttf2pt1", version = "1.3.8") 
 ```
 
 ## Usage
@@ -58,7 +72,13 @@ functions:
 
 ## Examples
 
+I highly recommend that you install librarian by running
+`install.packages('librarian')` as it lets you quickly install, update,
+and attach packages from CRAN, GitHub, and Bioconductor in one function
+call.
+
 ``` r
+# install.packages('librarian') # I highly recommend that you load yo
 # Load the necessary libraries
 librarian::shelf(tidyverse, palmerpenguins, ggbrookings)
 ```
@@ -90,7 +110,7 @@ In order to match the Brookings style in scatterplots you should set
        shape = "Penguin species") 
 ```
 
-<img src="man/figures/unnamed-chunk-6-1.png" width="2100" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-7-1.png" width="2100" style="display: block; margin: auto;" />
 
 ### Histogram
 
@@ -106,10 +126,12 @@ In order to match the Brookings style in scatterplots you should set
        y = "Frequency",
        title = "Penguin flipper lengths",
        caption = '**Source:** Palmer Penguins',
-       tag = 'FIGURE 2')
+       tag = 'FIGURE 2') +
+    scale_x_continuous(expand = expansion()) +
+    scale_y_continuous(expand = expansion())
 ```
 
-<img src="man/figures/unnamed-chunk-7-1.png" width="2100" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-8-1.png" width="2100" style="display: block; margin: auto;" />
 
 You can change the size of your text proportionally by setting
 `theme_brookings(base_size = your_size)` as shown below:
@@ -131,10 +153,12 @@ You can change the size of your text proportionally by setting
        x = "Flipper length (mm)",
        y = "Body mass (g)",
        color = "Penguin sex") +
-  facet_wrap(. ~ species, nrow = 3, ncol = 1)
+  facet_wrap(. ~ species, nrow = 3, ncol = 1) +
+        scale_x_continuous(expand = expansion()) +
+    scale_y_continuous(expand = expansion())
 ```
 
-<img src="man/figures/unnamed-chunk-8-1.png" width="2100" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-9-1.png" width="2100" style="display: block; margin: auto;" />
 
 ### Line plot
 
@@ -142,7 +166,7 @@ In order to match the Brookings style in line plots you should set
 `geom_line(size = 1.5)` as below:
 
 ``` r
-librarian::shelf(gapminder, ggtext, glue)
+librarian::shelf(gapminder)
 
 gapminder_filtered <-
   gapminder %>% 
@@ -165,8 +189,6 @@ gapminder_filtered %>%
                      limits = c(0, 15000), breaks = seq(0, 15000, 2500),
                      expand = expansion(0)) +
   scale_color_brookings() +
-  
-   
   labs(title = 'Economic growth in South America',
        subtitle = 'GDP per capita, 1952-2007',
        caption = '**Source:** Gapminder',
@@ -175,4 +197,4 @@ gapminder_filtered %>%
        y = NULL) 
 ```
 
-<img src="man/figures/unnamed-chunk-9-1.png" width="2100" style="display: block; margin: auto;" />
+<img src="man/figures/unnamed-chunk-10-1.png" width="2100" style="display: block; margin: auto;" />
