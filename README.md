@@ -78,7 +78,6 @@ and attach packages from CRAN, GitHub, and Bioconductor in one function
 call.
 
 ``` r
-# install.packages('librarian') # I highly recommend that you load yo
 # Load the necessary libraries
 librarian::shelf(tidyverse, palmerpenguins, ggbrookings)
 ```
