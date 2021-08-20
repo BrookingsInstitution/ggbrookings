@@ -11,8 +11,11 @@ helper functions.
 
 ## Installation
 
-In order to install packages from GitHub you first need to install
-`remotes`.
+In order to install packages from GitHub you need to install the
+`remotes` package. If you’re using a Windows computer you will also need
+to install `RTools`, which is available
+[here](https://cran.r-project.org/bin/windows/Rtools/) and on the
+software center if you’re using a Brookings laptop.
 
 ``` r
 install.packages("remotes")
