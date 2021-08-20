@@ -100,8 +100,9 @@ For more information on how this function works, please read Tom Mock's fantasti
 We start by creating a plot and using `ggsave()` to save it.
 
 ```{r, eval = TRUE}
-librarian::shelf(tidyverse, ggbrookings, palmerpenguins)
+librarian::shelf(tidyverse, ggbrookings, palmerpenguins, magick)
 theme_set(theme_brookings())
+
 p1 <-
   ggplot(data = penguins, aes(x = flipper_length_mm)) +
   geom_histogram(aes(fill = species),
@@ -113,12 +114,11 @@ p1 <-
        y = "Frequency",
        title = "Penguin flipper lengths",
        caption = '**Source:** Palmer Penguins',
-       tag = 'FIGURE 1')
+       tag = 'FIGURE 1') +
+  scale_x_continuous(expand = expansion()) +
+  scale_y_continuous(expand = expansion())
 
 ggsave("penguins.png", p1, dpi=300, height=3.7, width=6, units="in")
-
-
-
 ```
 
 Finally, to add a logo call:
@@ -130,8 +130,7 @@ add_logo('penguins.png', logo_path = 'brookings', 'bottom right', 5)
 The image will show up in your Viewer pane. To save it as a png you can right click on it and select "Save Image As..." or, more reproducibly, assign it to an object and then call `magick::image_write()` as below:
 
 ```{r}
-penguins <- add_logo('penguins.png', logo_path = 'brookings', 'bottom right', 5)
- 
-magick::image_write(penguins, "penguins.png")
+penguins_plot <- add_logo('penguins.png', logo_path = 'brookings', 'bottom right', 5)
+image_write(penguins_plot, "penguins.png")
 ```
 
