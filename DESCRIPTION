@@ -19,6 +19,7 @@ Imports:
     extrafont,
     ggplot2,
     ggtext,
+    librarian,
     magick,
     systemfonts
 Suggests: 

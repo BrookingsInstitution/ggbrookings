@@ -16,6 +16,7 @@ theme_brookings <- function(base_size = 14,
                             base_family = "Roboto",
                             base_line_size = base_size / 24,
                             base_rect_size = base_size / 24,
+                            web = FALSE,
                             ticks = TRUE) {
   # The half-line (base-fontsize / 2) sets up the basic vertical
   # rhythm of the theme. Most margins will be set to this value.
@@ -52,7 +53,7 @@ theme_brookings <- function(base_size = 14,
         face = "plain",
         colour = "black",
         size = base_size,
-        lineheight = 0.9,
+        lineheight = 1,
         hjust = 0.5,
         vjust = 0.5,
         angle = 0,
@@ -140,7 +141,6 @@ theme_brookings <- function(base_size = 14,
     # strip.switch.pad.grid = unit(half_line / 2, "pt"),
     # strip.switch.pad.wrap = unit(half_line / 2, "pt"),
 
-    plot.background =    element_rect(colour = "transparent"),
     plot.title =         ggtext::element_textbox_simple(
       # font size "large"
       size = rel(1.2),
@@ -198,5 +198,15 @@ theme_brookings <- function(base_size = 14,
         axis.ticks.y = element_blank()
 
       )
+  }
+
+  if(web == FALSE){
+     t <-
+       t + theme(plot.background = element_blank())
+  }
+
+  else{
+    t <-
+      t + theme(plot.background = element_rect(fill = '#FAFAFA'))
   }
 }

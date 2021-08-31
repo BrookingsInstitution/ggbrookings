@@ -11,7 +11,7 @@
 #' @export
 #' @import magick
 #'
-add_logo <- function(plot_path, logo_path =  c('brookings','es', 'gs', 'fp', 'metro', 'global', 'bi', 'bc', 'cc', 'ccf', 'ceaps', 'cepm', 'chp', 'cmep', 'csd', 'cti', 'crm', 'cue', 'cuse', 'doha', 'hc', 'tsinghua'), logo_position = 'bottom left', logo_scale = 5, height_padding = 0.045, width_padding = 0.02){
+add_logo <- function(plot_path, logo_path =  c('brookings','es', 'gs', 'fp', 'metro', 'global', 'bi', 'bc', 'cc', 'ccf', 'ceaps', 'cepm', 'chp', 'cmep', 'csd', 'cti', 'crm', 'cue', 'cuse', 'doha', 'hc', 'tsinghua'), logo_position = 'bottom right', logo_scale = 5, height_padding = 0.045, width_padding = 0.02){
 
   # Requires magick R Package https://github.com/ropensci/magick
 
