@@ -9,12 +9,11 @@ Authors@R:
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: An implementation of the Brookings style guide using ggplot2.
 License: GPL (>= 3)
-Encoding: UTF-8
-LazyData: true
-Roxygen: list(markdown = TRUE)
-URL: https://brookingsinstitution.github.io/ggbrookings/, https://github.com/BrookingsInstitution/ggbrookings
+URL: https://brookingsinstitution.github.io/ggbrookings/,
+    https://github.com/BrookingsInstitution/ggbrookings
 BugReports: https://github.com/BrookingsInstitution/ggbrookings/issues
-RoxygenNote: 7.1.1
+Depends: 
+    R (>= 2.10)
 Imports: 
     extrafont,
     ggplot2,
@@ -23,8 +22,11 @@ Imports:
     magick,
     systemfonts
 Suggests: 
-    rmarkdown,
+    knitr,
+    rmarkdown
+VignetteBuilder: 
     knitr
-VignetteBuilder: knitr
-Depends: 
-    R (>= 2.10)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
