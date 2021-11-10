@@ -1,8 +1,8 @@
-librarian::shelf(tidyverse, palmerpenguins, showtext)
+librarian::shelf(tidyverse, palmerpenguins, ggbrookings )
 devtools::load_all()
 
 
-# font_add(family = 'photina', regular = 'inst/fonts/Photina MT W04 Regular.ttf')
+
 # font_add(family = 'myriad-pro', regular = 'inst/fonts/MYRIADPRO-REGULAR.OTF',
 #          bold = 'inst/fonts/MYRIADPRO-BOLD.OTF',
 #          italic = 'inst/fonts/MYRIADPRO-CONDIT.OTF',

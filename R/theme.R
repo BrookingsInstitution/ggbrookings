@@ -224,7 +224,7 @@ theme_brookings <- function(base_size = 14,
 #' @export
 #'
 #' @examples
-theme_thp <- function(base_size = 14,
+theme_thp <- function(base_size = 12,
                       base_family = "myriad-pro",
                       base_line_size = base_size / 24,
                       base_rect_size = base_size / 24,
@@ -232,21 +232,23 @@ theme_thp <- function(base_size = 14,
   # Half line
   half_line <- base_size / 2
   # Load fonts
+  path <- system.file(package = "ggbrookings", 'fonts')
   sysfonts::font_add(family = 'photina',
-                     regular = 'inst/fonts/Photina MT W04 Regular.ttf')
+                     regular = glue::glue('{path}/Photina MT W04 Regular.ttf'))
   sysfonts::font_add(
     family = 'myriad-pro',
-    regular = 'inst/fonts/MYRIADPRO-REGULAR.OTF',
-    bold = 'inst/fonts/MYRIADPRO-SEMIBOLD.OTF',
-    italic = 'inst/fonts/MYRIADPRO-CONDIT.OTF',
-    bolditalic = 'inst/fonts/MYRIADPRO-BOLDIT.OTF'
+    regular = glue::glue('{path}/MYRIADPRO-REGULAR.OTF'),
+    bold = glue::glue('{path}/MYRIADPRO-SEMIBOLD.OTF'),
+    italic = glue::glue('{path}/MYRIADPRO-CONDIT.OTF'),
+    bolditalic = glue::glue('{path}/MYRIADPRO-BOLDIT.OTF')
   )
 
   sysfonts::font_add(
     family = 'helvetica_medium',
-    regular = 'inst/fonts/HelveticaNeueLTStd-Md.otf'
+    regular = glue::glue('{path}/HelveticaNeueLTStd-Md.otf')
   )
-  sysfonts::font_add(family = 'helvetica_light', regular = 'inst/fonts/HelveticaNeueLTStd-Lt.otf')
+  sysfonts::font_add(family = 'helvetica_light',
+                     regular = glue::glue('{path}/HelveticaNeueLTStd-Lt.otf'))
   # TODO write a warning message about showtext_auto() and rendering
   showtext::showtext_auto()
   showtext::showtext_opts(dpi = 300)
@@ -268,14 +270,14 @@ theme_thp <- function(base_size = 14,
       plot.title = ggtext::element_textbox_simple(
         # font size "large"
         family = 'photina',
-        size = rel(1.2),
+        size = rel(1.33),
         color = "#007363",
         hjust = 0,
         vjust = 1,
         margin = margin(b = half_line / 2, t = base_size)),
       strip.background = element_rect(fill = "#007363", colour = NA),
       strip.text = element_text(colour = "#FAFAFA",
-                                size = rel(0.8),
+                                size = rel(1),
                                 face = "bold",
                                 margin = margin(0.8 * half_line, 0.8 * half_line, 0.8 * half_line, 0.8 * half_line)),
       plot.subtitle = ggtext::element_textbox_simple(
@@ -288,21 +290,34 @@ theme_thp <- function(base_size = 14,
       ),
       plot.tag = element_text(
         family = 'helvetica_medium',
-        size = rel(0.8),
+        size = rel(2/3),
         hjust = 0,
         vjust = 1,
         color = "#007363"
       ),
       plot.caption = ggtext::element_textbox_simple(
         # font size "small"
-        size = rel(0.8),
+        size = rel(2/3),
         family = 'helvetica_light',
         vjust = 1,
         color = "#666666",
         hjust = 0,
         margin = margin(t = half_line)
       ),
-      axis.text = element_text(size = rel(0.8), colour = "#000000", face = 'bold')
+      axis.text = element_text(size = rel(0.833), colour = "#000000", face = 'bold'),
+      axis.title.x = element_text(
+        margin = margin(t = 1.25 * half_line),
+        size = rel(0.833),
+        vjust = 1, face = "bold"
+      ),
+      axis.title.y = element_text(
+        angle = 90,
+        margin = margin(r = half_line * 1.25),
+        vjust = 1,
+        face = "bold",
+        size = rel(0.833)
+      ),
+      legend.text = element_text(size = rel(0.833)),
 
 
     )
