@@ -204,7 +204,7 @@ theme_brookings <- function(base_size = 14,
 
   if (web == FALSE) {
     t <-
-      t + theme(plot.background = element_blank())
+      t + theme(plot.background = element_rect(fill = "#FFFFFF"))
   } else {
     t <-
       t + theme(plot.background = element_rect(fill = "#FAFAFA"))
