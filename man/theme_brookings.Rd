@@ -9,6 +9,7 @@ theme_brookings(
   base_family = "Roboto",
   base_line_size = base_size/24,
   base_rect_size = base_size/24,
+  web = FALSE,
   ticks = TRUE
 )
 }

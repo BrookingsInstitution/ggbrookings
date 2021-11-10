@@ -10,10 +10,10 @@ add_logo(
   logo_path = c("brookings", "es", "gs", "fp", "metro", "global", "bi", "bc", "cc",
     "ccf", "ceaps", "cepm", "chp", "cmep", "csd", "cti", "crm", "cue", "cuse", "doha",
     "hc", "tsinghua"),
-  logo_position = "bottom left",
+  logo_position = "bottom right",
   logo_scale = 5,
   height_padding = 0.045,
-  width_padding = 0.01
+  width_padding = 0.02
 )
 }
 \arguments{

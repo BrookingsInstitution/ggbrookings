@@ -61,29 +61,32 @@ theme_brookings <- function(base_size = 14,
         debug = FALSE
       ),
     axis.line = ggplot2::element_line(),
-    axis.line.x = ggplot2::element_line(colour = "#000000",
-                                        size = NULL,
-                                        linetype = NULL,
-                                        lineend = NULL),
+    axis.line.x = ggplot2::element_line(
+      colour = "#000000",
+      size = NULL,
+      linetype = NULL,
+      lineend = NULL
+    ),
     axis.line.y = ggplot2::element_blank(),
-
-
-    axis.text =          element_text(size = rel(0.8), colour = "#000000"),
-    axis.text.x =        element_text(margin = margin(t = 0.8 * half_line / 2), vjust = 1),
-    axis.text.x.top =    element_text(margin = margin(b = 0.8 * half_line / 2), vjust = 0),
-    axis.text.y =        element_text(margin = margin(r = 0.8 * half_line / 2), hjust = 1),
-    axis.text.y.right =  element_text(margin = margin(l = 0.8 * half_line / 2), hjust = 0),
-
-    axis.title.x =       element_text(margin = margin(t = 1.25 * half_line),
-                                      size = rel(0.8),
-                                      vjust = 1, face = 'bold'),
-    axis.title.x.top =   element_text(margin = margin(b = half_line / 2),
-                                      vjust = 0),
-    axis.title.y =       element_text(
+    axis.text = element_text(size = rel(0.8), colour = "#000000"),
+    axis.text.x = element_text(margin = margin(t = 0.8 * half_line / 2), vjust = 1),
+    axis.text.x.top = element_text(margin = margin(b = 0.8 * half_line / 2), vjust = 0),
+    axis.text.y = element_text(margin = margin(r = 0.8 * half_line / 2), hjust = 1),
+    axis.text.y.right = element_text(margin = margin(l = 0.8 * half_line / 2), hjust = 0),
+    axis.title.x = element_text(
+      margin = margin(t = 1.25 * half_line),
+      size = rel(0.8),
+      vjust = 1, face = "bold"
+    ),
+    axis.title.x.top = element_text(
+      margin = margin(b = half_line / 2),
+      vjust = 0
+    ),
+    axis.title.y = element_text(
       angle = 90,
       margin = margin(r = half_line * 1.25),
       vjust = 1,
-      face = 'bold',
+      face = "bold",
       size = rel(0.8)
     ),
     axis.title.y.right = element_text(
@@ -91,45 +94,45 @@ theme_brookings <- function(base_size = 14,
       margin = margin(l = half_line / 2),
       vjust = 0
     ),
-
-    legend.background =  element_rect(colour = NA),
+    legend.background = element_rect(colour = NA),
     # legend.spacing =     unit( half_line, "pt"),
     # legend.spacing.x =    NULL,
     # legend.spacing.y =    NULL,
     # legend.margin =      margin(0,0,0,0),
-    legend.key =         element_blank(),
-    legend.key.size =    unit(rel(0.8), "lines"),
-    legend.key.height =  NULL,
-    legend.key.width =   NULL,
-    legend.text =        element_text(size = rel(1)),
-    legend.text.align =  0,
-    legend.title =       element_blank(),
+    legend.key = element_blank(),
+    legend.key.size = unit(rel(0.8), "lines"),
+    legend.key.height = NULL,
+    legend.key.width = NULL,
+    legend.text = element_text(size = rel(1)),
+    legend.text.align = 0,
+    legend.title = element_blank(),
     legend.title.align = NULL,
-    legend.position =    "top",
-    legend.direction =   NULL,
+    legend.position = "top",
+    legend.direction = NULL,
     legend.justification = "center",
     # legend.box =         NULL,
     # legend.box.margin =  margin(0, 0, 0, 0, "cm"),
     # legend.box.background = element_blank(),
     # legend.box.spacing = unit(2 * half_line, "pt"),
 
-    panel.background =   element_blank(),
-    panel.border =       element_blank(),
-    panel.grid =         element_line(colour = "#CCCCCC",
-                                      # size = 1,
-                                      linetype = "dotted"),
+    panel.background = element_blank(),
+    panel.border = element_blank(),
+    panel.grid = element_line(
+      colour = "#CCCCCC",
+      # size = 1,
+      linetype = "dotted"
+    ),
     panel.grid.major.x = element_blank(),
-    panel.grid.minor =   element_blank(),
+    panel.grid.minor = element_blank(),
     # panel.spacing =      unit(half_line, "pt"),
     # panel.spacing.x =  unit(1.5, "lines"),
     # panel.spacing.y =  unit(2, "lines"),
-    panel.ontop    =     FALSE,
-
-    strip.background =   element_rect(fill = "#003A79", colour = NA),
-    strip.text =         element_text(
+    panel.ontop = FALSE,
+    strip.background = element_rect(fill = "#003A79", colour = NA),
+    strip.text = element_text(
       colour = "#FAFAFA",
       size = rel(0.8),
-      face = 'bold',
+      face = "bold",
       margin = margin(0.8 * half_line, 0.8 * half_line, 0.8 * half_line, 0.8 * half_line)
     ),
     # strip.text.x =       NULL,
@@ -141,7 +144,7 @@ theme_brookings <- function(base_size = 14,
     # strip.switch.pad.grid = unit(half_line / 2, "pt"),
     # strip.switch.pad.wrap = unit(half_line / 2, "pt"),
 
-    plot.title =         ggtext::element_textbox_simple(
+    plot.title = ggtext::element_textbox_simple(
       # font size "large"
       size = rel(1.2),
       color = "#003A79",
@@ -151,14 +154,14 @@ theme_brookings <- function(base_size = 14,
       margin = margin(b = half_line / 2, t = base_size)
     ),
     plot.title.position = "plot",
-    plot.subtitle =      ggtext::element_textbox_simple(
+    plot.subtitle = ggtext::element_textbox_simple(
       # font size "regular"
       hjust = 0,
       size = rel(1),
       vjust = 1,
       margin = margin(b = base_size)
     ),
-    plot.caption =       ggtext::element_textbox_simple(
+    plot.caption = ggtext::element_textbox_simple(
       # font size "small"
       size = rel(0.8),
       vjust = 1,
@@ -167,14 +170,14 @@ theme_brookings <- function(base_size = 14,
       margin = margin(t = half_line)
     ),
     plot.caption.position = "plot",
-    plot.tag =           element_text(
+    plot.tag = element_text(
       size = rel(0.8),
       hjust = 0,
       vjust = 1,
       color = "#003A79"
     ),
-    plot.tag.position =  c(0, 1),
-     plot.margin =        margin(half_line, half_line, half_line * 2, half_line),
+    plot.tag.position = c(0, 1),
+    plot.margin = margin(half_line, half_line, half_line * 2, half_line),
     # plot.margin = unit(c(0.5, 0.5, 2.5, 0.5), "lines"),
 
     complete = FALSE
@@ -190,23 +193,117 @@ theme_brookings <- function(base_size = 14,
   } else {
     t <-
       t + theme(
-        axis.ticks =         element_line(colour = "#000000"),
-        axis.ticks.length =  unit(half_line / 2, "pt"),
+        axis.ticks = element_line(colour = "#000000"),
+        axis.ticks.length = unit(half_line / 2, "pt"),
         axis.ticks.length.x = NULL,
         axis.ticks.length.x.top = NULL,
         axis.ticks.length.x.bottom = NULL,
         axis.ticks.y = element_blank()
-
       )
   }
 
-  if(web == FALSE){
-     t <-
-       t + theme(plot.background = element_blank())
-  }
-
-  else{
+  if (web == FALSE) {
     t <-
-      t + theme(plot.background = element_rect(fill = '#FAFAFA'))
+      t + theme(plot.background = element_blank())
+  } else {
+    t <-
+      t + theme(plot.background = element_rect(fill = "#FAFAFA"))
   }
+}
+
+
+#' Title
+#'
+#' @param base_size
+#' @param base_family
+#' @param base_line_size
+#' @param base_rect_size
+#' @param ...
+#'
+#' @return
+#' @export
+#'
+#' @examples
+theme_thp <- function(base_size = 14,
+                      base_family = "myriad-pro",
+                      base_line_size = base_size / 24,
+                      base_rect_size = base_size / 24,
+                      ...) {
+  # Half line
+  half_line <- base_size / 2
+  # Load fonts
+  sysfonts::font_add(family = 'photina',
+                     regular = 'inst/fonts/Photina MT W04 Regular.ttf')
+  sysfonts::font_add(
+    family = 'myriad-pro',
+    regular = 'inst/fonts/MYRIADPRO-REGULAR.OTF',
+    bold = 'inst/fonts/MYRIADPRO-SEMIBOLD.OTF',
+    italic = 'inst/fonts/MYRIADPRO-CONDIT.OTF',
+    bolditalic = 'inst/fonts/MYRIADPRO-BOLDIT.OTF'
+  )
+
+  sysfonts::font_add(
+    family = 'helvetica_medium',
+    regular = 'inst/fonts/HelveticaNeueLTStd-Md.otf'
+  )
+  sysfonts::font_add(family = 'helvetica_light', regular = 'inst/fonts/HelveticaNeueLTStd-Lt.otf')
+  # TODO write a warning message about showtext_auto() and rendering
+  showtext::showtext_auto()
+  showtext::showtext_opts(dpi = 300)
+
+  theme_brookings(...) %+replace%
+    theme(
+      text = element_text(
+        family = base_family,
+        face = "plain",
+        colour = "black",
+        size = base_size,
+        lineheight = 1,
+        hjust = 0.5,
+        vjust = 0.5,
+        angle = 0,
+        margin = margin(),
+        debug = FALSE
+      ),
+      plot.title = ggtext::element_textbox_simple(
+        # font size "large"
+        family = 'photina',
+        size = rel(1.2),
+        color = "#007363",
+        hjust = 0,
+        vjust = 1,
+        margin = margin(b = half_line / 2, t = base_size)),
+      strip.background = element_rect(fill = "#007363", colour = NA),
+      strip.text = element_text(colour = "#FAFAFA",
+                                size = rel(0.8),
+                                face = "bold",
+                                margin = margin(0.8 * half_line, 0.8 * half_line, 0.8 * half_line, 0.8 * half_line)),
+      plot.subtitle = ggtext::element_textbox_simple(
+        # font size "regular"
+        family = 'photina',
+        hjust = 0,
+        size = rel(1),
+        vjust = 1,
+        margin = margin(b = base_size)
+      ),
+      plot.tag = element_text(
+        family = 'helvetica_medium',
+        size = rel(0.8),
+        hjust = 0,
+        vjust = 1,
+        color = "#007363"
+      ),
+      plot.caption = ggtext::element_textbox_simple(
+        # font size "small"
+        size = rel(0.8),
+        family = 'helvetica_light',
+        vjust = 1,
+        color = "#666666",
+        hjust = 0,
+        margin = margin(t = half_line)
+      ),
+      axis.text = element_text(size = rel(0.8), colour = "#000000", face = 'bold')
+
+
+    )
 }

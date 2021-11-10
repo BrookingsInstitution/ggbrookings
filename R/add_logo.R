@@ -11,7 +11,7 @@
 #' @export
 #' @import magick
 #'
-add_logo <- function(plot_path, logo_path =  c('brookings','es', 'gs', 'fp', 'metro', 'global', 'bi', 'bc', 'cc', 'ccf', 'ceaps', 'cepm', 'chp', 'cmep', 'csd', 'cti', 'crm', 'cue', 'cuse', 'doha', 'hc', 'tsinghua'), logo_position = 'bottom right', logo_scale = 5, height_padding = 0.045, width_padding = 0.02){
+add_logo <- function(plot_path, logo_path = c("brookings", "es", "gs", "fp", "metro", "global", "bi", "bc", "cc", "ccf", "ceaps", "cepm", "chp", "cmep", "csd", "cti", "crm", "cue", "cuse", "doha", "hc", 'thp', "tsinghua"), logo_position = "bottom right", logo_scale = 5, height_padding = 0.045, width_padding = 0.02) {
 
   # Requires magick R Package https://github.com/ropensci/magick
 
@@ -21,11 +21,11 @@ add_logo <- function(plot_path, logo_path =  c('brookings','es', 'gs', 'fp', 'me
   }
 
 
-  if(logo_path %in% c('brookings','es', 'gs', 'fp', 'metro', 'global', 'bi', 'bc', 'cc', 'ccf', 'ceaps', 'cepm', 'chp', 'cmep', 'csd', 'cti', 'crm', 'cue', 'cuse', 'doha', 'hc', 'tsinghua')){
+  if (logo_path %in% c("brookings", "es", "gs", "fp", "metro", "global", "bi", "bc", "cc", "ccf", "ceaps", "cepm", "chp", "cmep", "csd", "cti", "crm", "cue", "cuse", "doha", "hc", 'thp', "tsinghua")) {
     logo_path <- match.arg(logo_path)
 
-    logo_path <- system.file(package = 'ggbrookings', glue::glue('logos/{logo_path}.png'))
-  } else{
+    logo_path <- system.file(package = "ggbrookings", glue::glue("logos/{logo_path}.png"))
+  } else {
     logo_path
   }
   # read in raw images
@@ -38,7 +38,7 @@ add_logo <- function(plot_path, logo_path =  c('brookings','es', 'gs', 'fp', 'me
 
   # default scale to 1/10th width of plot
   # Can change with logo_scale
-  logo <- magick::image_scale(logo_raw, as.character(plot_width/logo_scale))
+  logo <- magick::image_scale(logo_raw, as.character(plot_width / logo_scale))
 
   # Get width of logo
   logo_width <- magick::image_info(logo)$width
@@ -49,20 +49,19 @@ add_logo <- function(plot_path, logo_path =  c('brookings','es', 'gs', 'fp', 'me
   # Use 0.01 for 1% - aesthetic padding
 
   if (logo_position == "top right") {
-    x_pos = plot_width - logo_width - width_padding * plot_width
-    y_pos = height_padding * plot_height
+    x_pos <- plot_width - logo_width - width_padding * plot_width
+    y_pos <- height_padding * plot_height
   } else if (logo_position == "top left") {
-    x_pos = width_padding * plot_width
-    y_pos = height_padding * plot_height
+    x_pos <- width_padding * plot_width
+    y_pos <- height_padding * plot_height
   } else if (logo_position == "bottom right") {
-    x_pos = plot_width - logo_width - width_padding * plot_width
-    y_pos = plot_height - logo_height - height_padding * plot_height
+    x_pos <- plot_width - logo_width - width_padding * plot_width
+    y_pos <- plot_height - logo_height - height_padding * plot_height
   } else if (logo_position == "bottom left") {
-    x_pos = width_padding * plot_width
-    y_pos = plot_height - logo_height - height_padding * plot_height
+    x_pos <- width_padding * plot_width
+    y_pos <- plot_height - logo_height - height_padding * plot_height
   }
 
   # Compose the actual overlay
   magick::image_composite(plot, logo, offset = paste0("+", x_pos, "+", y_pos))
-
 }

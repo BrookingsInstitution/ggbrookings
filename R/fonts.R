@@ -14,11 +14,8 @@
 #' @md
 #' @export
 import_roboto <- function() {
-
   if (sum(grepl("[Rr]oboto$", extrafont::fonts())) > 0) {
-
     "Roboto is already imported and registered."
-
   } else {
 
     # get a list of all fonts on the machine
@@ -35,8 +32,27 @@ import_roboto <- function() {
 
     # register the fonts
     extrafont::loadfonts()
-
-
   }
+}
 
+import_photina <- function() {
+  if (sum(grepl("[Pp]hotinaMTW04-Regular$", extrafont::fonts())) > 0) {
+    "Photina is already imported and registered."
+  } else {
+
+    # get a list of all fonts on the machine
+    local_fonts <- systemfonts::system_fonts()
+
+    # subset the list to just photina fonts
+    photina_fonts <- local_fonts[grepl(pattern = "[Pp]hotinaMTW04-Regulara", x = local_fonts$family), ]
+
+    # create a vector of directories where photina fonts are located
+    photina_directories <- unique(gsub("[Pp]hotinaMTW04-Regular.*\\.ttf", "", photina_fonts$path))
+
+    # import the photina fonts
+    extrafont::font_import(paths = photina_directories, pattern = "[Pp]hotinaMTW04-Regular", prompt = FALSE)
+
+    # register the fonts
+    extrafont::loadfonts()
+  }
 }

@@ -6,9 +6,9 @@
 \alias{brookings_palettes}
 \title{Brookings Institution palettes}
 \format{
-An object of class \code{character} of length 83.
+An object of class \code{character} of length 94.
 
-An object of class \code{list} of length 20.
+An object of class \code{list} of length 26.
 }
 \source{
 Brookings Style Guide

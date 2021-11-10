@@ -26,6 +26,5 @@ brookings_view_palette(palette = "brand1")
 
 \examples{
 brookings_view_palette()
-brookings_view_palette('brand1')
-
+brookings_view_palette("brand1")
 }
