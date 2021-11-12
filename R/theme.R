@@ -25,6 +25,7 @@ theme_brookings <- function(base_size = 14,
   # particular for axis tick sizes. And also, for axis ticks and
   # axis titles, `half_size` is too large a distance, and we use `half_size/2`
   # instead.
+
   half_line <- base_size / 2
 
   # Throughout the theme, we use three font sizes, `base_size` (`rel(1)`)
