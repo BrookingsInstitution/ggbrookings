@@ -323,6 +323,5 @@ theme_thp <- function(base_size = 12,
       ),
       legend.text = ggplot2::element_text(size = rel(0.833)),
 
-
     )
 }
