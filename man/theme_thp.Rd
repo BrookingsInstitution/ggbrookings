@@ -13,10 +13,15 @@ theme_thp(
 )
 }
 \arguments{
-\item{...}{}
-}
-\value{
+\item{base_size}{base font size, given in pts.}
 
+\item{base_family}{base font family. Default is "Roboto".}
+
+\item{base_line_size}{line size in mm.}
+
+\item{base_rect_size}{border size in mm.}
+
+\item{...}{additional arguments passed to theme_brookings()}
 }
 \description{
 Title

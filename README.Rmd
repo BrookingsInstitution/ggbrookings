@@ -6,7 +6,7 @@ output: github_document
 
 <!-- badges: start -->
 
-[![R-CMD-check](%5Bhttps://github.com/BrookingsInstitution/ggbrookings/workflows/R-CMD-check/badge.svg)](https://github.com/BrookingsInstitution/ggbrookings/actions)](https://github.com/BrookingsInstitution/ggbrookings/workflows/R-CMD-check/badge.svg)](<https://github.com/BrookingsInstitution/ggbrookings/actions>))
+[![R-CMD-check](%5Bhttps://github.com/BrookingsInstitution/ggbrookings/workflows/R-CMD-check/badge.svg)](https://github.com/BrookingsInstitution/ggbrookings/actions)](<https://github.com/BrookingsInstitution/ggbrookings/workflows/R-CMD-check/badge.svg>)](<https://github.com/BrookingsInstitution/ggbrookings/actions>))
 [![R-CMD-check](https://github.com/BrookingsInstitution/ggbrookings/workflows/R-CMD-check/badge.svg)](https://github.com/BrookingsInstitution/ggbrookings/actions)
 
 <!-- badges: end -->

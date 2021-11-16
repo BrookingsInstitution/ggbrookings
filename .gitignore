@@ -43,3 +43,6 @@ docs/
 
 # translation temp files
 po/*~
+
+# misc files
+misc/

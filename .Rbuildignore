@@ -8,3 +8,8 @@
 ^pkgdown$
 ^\.github$
 ^\.pdf$
+^.png$
+^\README_files$
+^README-.*\.png$
+^README.Rmd
+misc/

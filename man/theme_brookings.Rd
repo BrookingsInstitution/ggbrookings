@@ -22,10 +22,9 @@ theme_brookings(
 
 \item{base_rect_size}{border size in mm.}
 
-\item{ticks}{include axis ticks. Default is FALSE.}
-}
-\value{
+\item{web}{If TRUE sets the plot background color to the Brookings website background color}
 
+\item{ticks}{include axis ticks. Default is FALSE.}
 }
 \description{
 A theme following the Brookings style guide.

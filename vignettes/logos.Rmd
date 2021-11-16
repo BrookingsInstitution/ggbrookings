@@ -85,12 +85,9 @@ Currently, the available built in logos are:
 +---------------------------------------------+----------------------------+
 | Center on Regulation and Markets            | 'crm'                      |
 +---------------------------------------------+----------------------------+
-| Doha Center                                 | 'doha'                     |
-+---------------------------------------------+----------------------------+
 | Hutchins Center                             | 'hc'                       |
 +---------------------------------------------+----------------------------+
-| Brookings-Tsinghua Center for Public Policy | 'tsinghua'                 |
-+---------------------------------------------+----------------------------+
+
 
 For more information on how this function works, please read Tom Mock's fantastic blog post on [how to add a logo to your plot](https://themockup.blog/posts/2019-01-09-add-a-logo-to-your-plot/).
 `ggbrookings::add_logo()` builds off of the function described in the article with some minor modifications.

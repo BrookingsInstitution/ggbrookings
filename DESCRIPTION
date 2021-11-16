@@ -8,7 +8,7 @@ Authors@R:
            email = "malcalakovalski@brookings.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: An implementation of the Brookings style guide using ggplot2.
-License: GPL (>= 3)
+License: GPL-3 + file LICENSE
 URL: https://brookingsinstitution.github.io/ggbrookings/,
     https://github.com/BrookingsInstitution/ggbrookings
 BugReports: https://github.com/BrookingsInstitution/ggbrookings/issues
@@ -17,10 +17,15 @@ Depends:
 Imports: 
     extrafont,
     ggplot2,
+    grDevices,
     ggtext,
     librarian,
     magick,
-    systemfonts
+    systemfonts,
+    sysfonts,
+    showtext,
+    glue,
+    scales
 Suggests: 
     knitr,
     rmarkdown

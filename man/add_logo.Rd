@@ -30,7 +30,7 @@ add_logo(
 \item{width_padding}{Optional. Control the x axis position of a logo by specifying the padding proportion. Default is 1\% padding.}
 }
 \value{
-
+A png image with a logo
 }
 \description{
 Add a logo to your plot or image

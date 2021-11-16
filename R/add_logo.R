@@ -7,7 +7,7 @@
 #' @param height_padding Optional. Control the y axis position of a logo by specifying the padding proportion. Default is 4.5% padding.
 #' @param width_padding Optional. Control the x axis position of a logo by specifying the padding proportion. Default is 1% padding.
 #'
-#' @return
+#' @return A png image with a logo
 #' @export
 #' @import magick
 #'
