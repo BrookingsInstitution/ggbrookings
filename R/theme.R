@@ -40,7 +40,7 @@ theme_brookings <- function(base_size = 14,
         colour = "black",
         size = base_line_size,
         linetype = 1,
-        lineend = "butt"
+            lineend = "butt"
       ),
     rect =
       ggplot2::element_rect(
