@@ -1,0 +1,101 @@
+---
+title: "Brookings Palettes"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Brookings Palettes}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE, 
+  message = FALSE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ggbrookings)
+```
+
+You can check out all the colors for each palette by running     `brookings_view_palette('name_of_palette')`. The colors in some of these palettes may still change from feedback and further experimentation. Some examples below:
+
+## Brand 
+The brand palette is the default for the `scale_brookings_` functions. Use colors from the brand palette whenever possible.
+```{r}
+
+brookings_view_palette('brand1')
+brookings_view_palette('brand2')
+```
+
+## Analogous
+Different shades of the same hue, or of similar hues can be used when the associated values are related.
+```{r}
+brookings_view_palette('analogous1')
+brookings_view_palette('analogous2')
+```
+
+## Contrasting
+Colors on the opposite ends of the spectrum. Use Brookings Blue with Secondary colors.
+```{r}
+brookings_view_palette('contrasting1')
+brookings_view_palette('contrasting2')
+```
+
+## Semantic
+Where applicable, use colors that are associated with certain concepts. For example, `semantic3` could show subsets of gender data (female, male and other).
+```{r}
+brookings_view_palette('semantic1')
+brookings_view_palette('semantic2')
+brookings_view_palette('semantic3')
+
+```
+
+## Positive and negative
+Shows pros, cons and neutral, or positive, negative and neutral data.
+```{r}
+brookings_view_palette('pos_neg1')
+brookings_view_palette('pos_neg2')
+```
+
+## Political
+Use red and blue of similar intensity to represent data related to political parties in the US. Yellow in political3 and political4 represents ‘Independent’ category
+```{r}
+brookings_view_palette('political1')
+brookings_view_palette('political2')
+brookings_view_palette('political3')
+brookings_view_palette('political4')
+```
+
+## Categorical
+
+Distinguish discrete categories of data that do not have an inherent ordering. This palette uses distinct hues of visually similar brightness and saturation to avoid creating a sense of order or priority. A maximum of 6 categorical colors are provided as it becomes difficult for people to distinguish between hues after 5-8 colors. If more than 6 colors are needed, consider alternative solutions such as grouping some categories or using alternative visual cues. 
+```{r}
+brookings_view_palette('categorical')
+```
+
+## Sequential
+Sequential palettes are used to show an inherent order or variations in numeric values. Light colors typically indicate low values and darker or brighter colors  indicate high values.
+```{r}
+brookings_view_palette('sequential1')
+```
+
+In addition to variations in lightness, we can also use two distinct hues to give more contrast. 
+```{r}
+brookings_view_palette('sequential2')
+```
+ 
+## Diverging 
+Diverging palettes are useful when dealing with negative and positive values or a range of values that have two extremes with a baseline central value, like zero. The Brookings diverging palette should uses two distinct hues of similar brightness and saturation with a neutral color in the middle. Using a discrete set of colors with evenly distributed gradation can improve clarity of values relative to a continuous palette. 
+```{r}
+brookings_view_palette('diverging')
+```
+
+## Miscellaneous 
+A pleasing option using Brookings Blue and accent yellow.
+```{r}
+brookings_view_palette('misc')
+```
+
