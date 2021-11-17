@@ -13,3 +13,4 @@
 ^README-.*\.png$
 ^README.Rmd
 misc/
+^vignettes/articles$
