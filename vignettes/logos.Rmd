@@ -97,7 +97,7 @@ For more information on how this function works, please read Tom Mock's fantasti
 We start by creating a plot and using `ggsave()` to save it.
 
 ```{r, eval = TRUE}
-librarian::shelf(tidyverse, ggbrookings, palmerpenguins, magick)
+librarian::shelf(ggplot2, ggbrookings, palmerpenguins, magick)
 theme_set(theme_brookings())
 
 p1 <-
