@@ -26,10 +26,11 @@ Imports:
     showtext (>= 0.9.4),
     glue (>= 1.5.0),
     scales (>= 1.1.1)
-Suggests: 
     palmerpenguins (>= 0.1.0),
     knitr (>= 1.36),
     rmarkdown (>= 2.11)
+Suggests: 
+
 VignetteBuilder: 
     knitr, rmarkdown
 Encoding: UTF-8
