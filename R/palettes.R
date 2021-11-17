@@ -260,6 +260,7 @@ scale_color_brookings <- function(palette = "brand1", discrete = TRUE, reverse =
 #' @rdname scales_brookings
 #' @export
 scale_fill_brookings <- function(palette = "brand1", discrete = TRUE, reverse = FALSE, ...) {
+
   pal <- brookings_pal(palette = palette, reverse = reverse)
 
   if (discrete) {
