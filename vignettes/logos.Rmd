@@ -128,6 +128,7 @@ The image will show up in your Viewer pane. To save it as a png you can right cl
 
 ```{r}
 penguins_plot <- add_logo('penguins.png', logo_path = 'brookings', 'bottom right', 5)
+
 image_write(penguins_plot, "penguins.png")
 ```
 
