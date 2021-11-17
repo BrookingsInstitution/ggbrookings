@@ -19,15 +19,15 @@ Imports:
     ggplot2 (>= 3.3.5),
     grDevices (>= 4.1.1),
     ggtext (>= 0.1.1),
-    librarian (>= 1.8.1),
     magick (>= 2.7.3),
     systemfonts (>= 1.0.3),
-    sysfonts (>= 0.8.5),
-    showtext (>= 0.9.4),
     glue (>= 1.5.0),
     scales (>= 1.1.1),
 Suggests: 
     palmerpenguins (>= 0.1.0),
+    librarian (>= 1.8.1),
+    sysfonts (>= 0.8.5),
+    showtext (>= 0.9.4),
     knitr (>= 1.36),
     rmarkdown (>= 2.11)
 VignetteBuilder: 

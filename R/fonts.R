@@ -36,6 +36,8 @@ import_roboto <- function() {
 }
 
 import_photina <- function() {
+
+
   if (sum(grepl("[Pp]hotinaMTW04-Regular$", extrafont::fonts())) > 0) {
     "Photina is already imported and registered."
   } else {

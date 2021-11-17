@@ -222,9 +222,6 @@ theme_brookings <- function(base_size = 14,
 #' @param base_rect_size border size in mm.
 #' @param ... additional arguments passed to theme_brookings()
 #'
-#' @importFrom glue glue
-#' @importFrom sysfonts font_add
-#' @importFrom showtext showtext_auto showtext_opts
 #' @importFrom ggplot2 `%+replace%`
 #' @export
 #'
@@ -233,6 +230,18 @@ theme_thp <- function(base_size = 12,
                       base_line_size = base_size / 24,
                       base_rect_size = base_size / 24,
                       ...) {
+
+  if (!requireNamespace("showtext", quietly = TRUE)) {
+    stop("Package \"showtext\" needed for this function to work. Please install it.",
+         call. = FALSE)
+  }
+
+  if (!requireNamespace("sysfonts", quietly = TRUE)) {
+    stop("Package \"sysfonts\" needed for this function to work. Please install it.",
+         call. = FALSE)
+  }
+
+
   # Half line
   half_line <- base_size / 2
   # Load fonts
