@@ -2,6 +2,7 @@
 
 export(add_logo)
 export(brookings_colors)
+export(brookings_save)
 export(brookings_view_palette)
 export(import_roboto)
 export(import_thp_fonts)

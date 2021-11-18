@@ -247,21 +247,21 @@ theme_thp <- function(base_size = 12,
   # Load fonts
   path <- system.file(package = "ggbrookings", 'fonts')
   sysfonts::font_add(family = 'photina',
-                     regular = glue::glue('{path}/Photina.ttf'))
+                     regular = glue::glue('{path}/Photina/Photina.ttf'))
   sysfonts::font_add(
     family = 'myriad-pro',
-    regular = glue::glue('{path}/MYRIADPRO-REGULAR.ttf'),
-    bold = glue::glue('{path}/MYRIADPRO-SEMIBOLD.ttf'),
-    italic = glue::glue('{path}/MYRIADPRO-CONDIT.ttf'),
-    bolditalic = glue::glue('{path}/MYRIADPRO-BOLDIT.ttf')
+    regular = glue::glue('{path}/Myriad-Pro/MYRIADPRO-REGULAR.ttf'),
+    bold = glue::glue('{path}/Myriad-Pro/MYRIADPRO-SEMIBOLD.ttf'),
+    italic = glue::glue('{path}/Myriad-Pro/MYRIADPRO-CONDIT.ttf'),
+    bolditalic = glue::glue('{path}/Myriad-Pro/MYRIADPRO-BOLDIT.ttf')
   )
 
   sysfonts::font_add(
     family = 'helvetica_medium',
-    regular = glue::glue('{path}/HelveticaNeueLTStd-Md.ttf')
+    regular = glue::glue('{path}/Helvetica/HelveticaNeueLTStd-Md.ttf')
   )
   sysfonts::font_add(family = 'helvetica_light',
-                     regular = glue::glue('{path}/HelveticaNeueLTStd-Lt.ttf'))
+                     regular = glue::glue('{path}/Helvetica/HelveticaNeueLTStd-Lt.ttf'))
   # TODO write a warning message about showtext_auto() and rendering
   showtext::showtext_auto()
   showtext::showtext_opts(dpi = 300)
