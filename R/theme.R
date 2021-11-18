@@ -250,18 +250,18 @@ theme_thp <- function(base_size = 12,
                      regular = glue::glue('{path}/Photina.ttf'))
   sysfonts::font_add(
     family = 'myriad-pro',
-    regular = glue::glue('{path}/MYRIADPRO-REGULAR.OTF'),
-    bold = glue::glue('{path}/MYRIADPRO-SEMIBOLD.OTF'),
-    italic = glue::glue('{path}/MYRIADPRO-CONDIT.OTF'),
-    bolditalic = glue::glue('{path}/MYRIADPRO-BOLDIT.OTF')
+    regular = glue::glue('{path}/MYRIADPRO-REGULAR.ttf'),
+    bold = glue::glue('{path}/MYRIADPRO-SEMIBOLD.ttf'),
+    italic = glue::glue('{path}/MYRIADPRO-CONDIT.ttf'),
+    bolditalic = glue::glue('{path}/MYRIADPRO-BOLDIT.ttf')
   )
 
   sysfonts::font_add(
     family = 'helvetica_medium',
-    regular = glue::glue('{path}/HelveticaNeueLTStd-Md.otf')
+    regular = glue::glue('{path}/HelveticaNeueLTStd-Md.ttf')
   )
   sysfonts::font_add(family = 'helvetica_light',
-                     regular = glue::glue('{path}/HelveticaNeueLTStd-Lt.otf'))
+                     regular = glue::glue('{path}/HelveticaNeueLTStd-Lt.ttf'))
   # TODO write a warning message about showtext_auto() and rendering
   showtext::showtext_auto()
   showtext::showtext_opts(dpi = 300)
