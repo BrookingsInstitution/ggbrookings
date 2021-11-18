@@ -245,23 +245,29 @@ theme_thp <- function(base_size = 12,
   # Half line
   half_line <- base_size / 2
   # Load fonts
-  path <- system.file(package = "ggbrookings", 'fonts')
-  sysfonts::font_add(family = 'photina',
-                     regular = glue::glue('{path}/Photina/Photina.ttf'))
-  sysfonts::font_add(
-    family = 'myriad-pro',
-    regular = glue::glue('{path}/Myriad-Pro/MYRIADPRO-REGULAR.ttf'),
-    bold = glue::glue('{path}/Myriad-Pro/MYRIADPRO-SEMIBOLD.ttf'),
-    italic = glue::glue('{path}/Myriad-Pro/MYRIADPRO-CONDIT.ttf'),
-    bolditalic = glue::glue('{path}/Myriad-Pro/MYRIADPRO-BOLDIT.ttf')
-  )
+  if(sum(grepl('photina|myriad-pro|helvetica_medium|helvetica_light', sysfonts::font_families())) != 4){
+    path <- system.file(package = "ggbrookings", 'fonts')
+    sysfonts::font_add(family = 'photina',
+                       regular = glue::glue('{path}/Photina/Photina.ttf'))
+    sysfonts::font_add(
+      family = 'myriad-pro',
+      regular = glue::glue('{path}/Myriad-Pro/MYRIADPRO-REGULAR.ttf'),
+      bold = glue::glue('{path}/Myriad-Pro/MYRIADPRO-SEMIBOLD.ttf'),
+      italic = glue::glue('{path}/Myriad-Pro/MYRIADPRO-CONDIT.ttf'),
+      bolditalic = glue::glue('{path}/Myriad-Pro/MYRIADPRO-BOLDIT.ttf')
+    )
 
-  sysfonts::font_add(
-    family = 'helvetica_medium',
-    regular = glue::glue('{path}/Helvetica/HelveticaNeueLTStd-Md.ttf')
-  )
-  sysfonts::font_add(family = 'helvetica_light',
-                     regular = glue::glue('{path}/Helvetica/HelveticaNeueLTStd-Lt.ttf'))
+    sysfonts::font_add(
+      family = 'helvetica_medium',
+      regular = glue::glue('{path}/Helvetica/HelveticaNeueLTStd-Md.ttf'),
+      bold = glue::glue('{path}/Helvetica/HelveticaNeue-Bold.ttf')
+    )
+    sysfonts::font_add(family = 'helvetica_light',
+                       regular = glue::glue('{path}/Helvetica/HelveticaNeueLTStd-Lt.ttf'),
+                       bold = glue::glue('{path}/Helvetica/HelveticaNeue-Bold.ttf'))
+  }
+
+
   # TODO write a warning message about showtext_auto() and rendering
   showtext::showtext_auto()
   showtext::showtext_opts(dpi = 300)
@@ -321,13 +327,12 @@ theme_thp <- function(base_size = 12,
       axis.title.x = ggplot2::element_text(
         margin = margin(t = 1.25 * half_line),
         size = rel(0.833),
-        vjust = 1, face = "bold"
+        vjust = 1
       ),
       axis.title.y = ggplot2::element_text(
         angle = 90,
         margin = margin(r = half_line * 1.25),
         vjust = 1,
-        face = "bold",
         size = rel(0.833)
       ),
       legend.text = ggplot2::element_text(size = rel(0.833)),
