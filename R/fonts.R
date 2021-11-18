@@ -35,26 +35,79 @@ import_roboto <- function() {
   }
 }
 
-import_photina <- function() {
 
 
-  if (sum(grepl("[Pp]hotinaMTW04-Regular$", extrafont::fonts())) > 0) {
-    "Photina is already imported and registered."
-  } else {
 
-    # get a list of all fonts on the machine
-    local_fonts <- systemfonts::system_fonts()
+#' @title Import THP fonts
+#' @description Imports Photina, Helvetica Neue, and Myriad Pro
+#' @details import_*() functions taken from hrbrthemes.
+#' @seealso
+#'  \code{\link[extrafont]{font_import}}
+#' @rdname import_thp_fonts
+#' @export
+#' @importFrom extrafont font_import
 
-    # subset the list to just photina fonts
-    photina_fonts <- local_fonts[grepl(pattern = "[Pp]hotina", x = local_fonts$family), ]
+import_thp_fonts <- function() {
 
-    # create a vector of directories where photina fonts are located
-    photina_directories <- unique(gsub("[Pp]hotina.*\\.ttf", "", photina_fonts$path))
-
-    # import the photina fonts
-    extrafont::font_import(paths = photina_directories, pattern = "[Pp]hotina", prompt = FALSE)
-
-    # register the fonts
-    extrafont::loadfonts()
+  if (sum(grepl("[Mm]yriad Pro$", extrafont::fonts())) > 0) {
+    print("Myriad Pro is already imported and registered.")
+  } else{
+    import_myriad_pro()
   }
+  # Photina
+  if (sum(grepl("[Pp]hotina", extrafont::fonts())) > 0) {
+    print("Photina is already imported and registered.")
+  } else{
+  import_photina()
+  }
+
+  # Helvetica
+  if (sum(grepl("[Hh]elveticaNeueLT", extrafont::fonts())) > 0) {
+    print("Helvetica is already imported and registered.")
+  } else{
+    import_helvetica()
+  }
+
+
+}
+
+
+
+import_photina <- function() {
+  photina_font_dir <- system.file("fonts", "Photina", package = "ggbrookings")
+
+  suppressWarnings(suppressMessages(extrafont::font_import(paths = photina_font_dir, prompt = FALSE)))
+
+  message(
+    sprintf(
+      "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
+      photina_font_dir
+    )
+  )
+}
+
+import_helvetica <- function(){
+  helvetica_font_dir <- system.file("fonts", "Helvetica", package = "ggbrookings")
+
+  suppressWarnings(suppressMessages(extrafont::font_import(paths = helvetica_font_dir, prompt = FALSE)))
+
+  message(
+    sprintf(
+      "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
+      helvetica_font_dir
+    )
+  )
+}
+
+import_myriad_pro <- function(){
+  myriad_pro_font_dir <- system.file("fonts", "Myriad-Pro", package = "ggbrookings")
+
+  suppressWarnings(suppressMessages(extrafont::font_import(paths = myriad_pro_font_dir, prompt = FALSE)))
+
+  message(
+    sprintf(
+      "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
+      myriad_pro_font_dir
+    )
+  )
 }
