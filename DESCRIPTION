@@ -17,7 +17,6 @@ Depends:
 Imports: 
     extrafont (>= 0.17),
     ggplot2 (>= 3.3.5),
-    grDevices (>= 4.1.1),
     ggtext (>= 0.1.1),
     magick (>= 2.7.3),
     systemfonts (>= 1.0.3),
