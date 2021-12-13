@@ -127,21 +127,17 @@ register_thp_fonts <- function(dpi = 300){
                        regular = glue::glue('{path}/Photina/Photina.ttf'))
     sysfonts::font_add(
       family = 'myriad-pro',
-      regular = glue::glue('{path}/Myriad-Pro/MYRIADPRO-REGULAR.ttf'),
-      bold = glue::glue('{path}/Myriad-Pro/MYRIADPRO-SEMIBOLD.ttf'),
-      italic = glue::glue('{path}/Myriad-Pro/MYRIADPRO-CONDIT.ttf'),
-      bolditalic = glue::glue('{path}/Myriad-Pro/MYRIADPRO-BOLDIT.ttf')
+      regular = glue::glue('{path}/Myriad-Pro/MYRIADPRO-REGULAR.OTF'),
+      bold = glue::glue('{path}/Myriad-Pro/MYRIADPRO-SEMIBOLD.OTF'),
+      italic = glue::glue('{path}/Myriad-Pro/MYRIADPRO-CONDIT.OTF'),
+      bolditalic = glue::glue('{path}/Myriad-Pro/MYRIADPRO-BOLDIT.OTF')
     )
 
     sysfonts::font_add(
-      family = 'helvetica_medium',
-      regular = glue::glue('{path}/Helvetica/HelveticaNeueLTStd-Md.ttf'),
-      bold = glue::glue('{path}/Helvetica/HelveticaNeue-Bold.ttf')
+      family = 'helvetica',
+      regular = glue::glue('{path}/Helvetica/HelveticaNeueLTStd-Lt.OTF'),
+      bold = glue::glue('{path}/Helvetica/HelveticaNeueLTStd-Md.OTF'),
     )
-    sysfonts::font_add(family = 'helvetica_light',
-                       regular = glue::glue('{path}/Helvetica/HelveticaNeueLTStd-Lt.ttf'),
-                       bold = glue::glue('{path}/Helvetica/HelveticaNeue-Bold.ttf'))
-
 
     showtext::showtext_auto()
     showtext::showtext_opts(dpi = dpi)

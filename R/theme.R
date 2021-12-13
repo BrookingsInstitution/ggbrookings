@@ -260,7 +260,6 @@ theme_thp <- function(base_size = 12,
   #   sysfonts::font_add(
   #     family = 'helvetica_medium',
   #     regular = glue::glue('{path}/Helvetica/HelveticaNeueLTStd-Md.ttf'),
-  #     bold = glue::glue('{path}/Helvetica/HelveticaNeue-Bold.ttf')
   #   )
   #   sysfonts::font_add(family = 'helvetica_light',
   #                      regular = glue::glue('{path}/Helvetica/HelveticaNeueLTStd-Lt.ttf'),
@@ -311,7 +310,7 @@ theme_thp <- function(base_size = 12,
         margin = margin(b = base_size)
       ),
       plot.tag = ggplot2::element_text(
-        family = 'helvetica_medium',
+        family = 'helvetica',
         size = rel(2/3),
         hjust = 0,
         vjust = 1,
@@ -320,7 +319,7 @@ theme_thp <- function(base_size = 12,
       plot.caption = ggtext::element_textbox_simple(
         # font size "small"
         size = rel(2/3),
-        family = 'helvetica_light',
+        family = 'helvetica',
         vjust = 1,
         color = "#666666",
         hjust = 0,
