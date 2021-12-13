@@ -21,7 +21,8 @@ Imports:
     magick (>= 2.7.3),
     systemfonts (>= 1.0.3),
     glue (>= 1.5.0),
-    scales (>= 1.1.1)
+    scales (>= 1.1.1),
+    grDevices
 Suggests: 
     palmerpenguins (>= 0.1.0),
     librarian (>= 1.8.1),

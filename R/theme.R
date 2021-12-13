@@ -271,6 +271,9 @@ theme_thp <- function(base_size = 12,
   # TODO write a warning message about showtext_auto() and rendering
   showtext::showtext_auto()
   showtext::showtext_opts(dpi = 300)
+  if(.Platform$OS.type == 'windows'){
+    x11()
+  }
 
   theme_brookings(...) %+replace%
     theme(
