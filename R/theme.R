@@ -245,35 +245,35 @@ theme_thp <- function(base_size = 12,
   # Half line
   half_line <- base_size / 2
   # Load fonts
-  if(sum(grepl('photina|myriad-pro|helvetica_medium|helvetica_light', sysfonts::font_families())) != 4){
-    path <- system.file(package = "ggbrookings", 'fonts')
-    sysfonts::font_add(family = 'photina',
-                       regular = glue::glue('{path}/Photina/Photina.ttf'))
-    sysfonts::font_add(
-      family = 'myriad-pro',
-      regular = glue::glue('{path}/Myriad-Pro/MYRIADPRO-REGULAR.ttf'),
-      bold = glue::glue('{path}/Myriad-Pro/MYRIADPRO-SEMIBOLD.ttf'),
-      italic = glue::glue('{path}/Myriad-Pro/MYRIADPRO-CONDIT.ttf'),
-      bolditalic = glue::glue('{path}/Myriad-Pro/MYRIADPRO-BOLDIT.ttf')
-    )
-
-    sysfonts::font_add(
-      family = 'helvetica_medium',
-      regular = glue::glue('{path}/Helvetica/HelveticaNeueLTStd-Md.ttf'),
-      bold = glue::glue('{path}/Helvetica/HelveticaNeue-Bold.ttf')
-    )
-    sysfonts::font_add(family = 'helvetica_light',
-                       regular = glue::glue('{path}/Helvetica/HelveticaNeueLTStd-Lt.ttf'),
-                       bold = glue::glue('{path}/Helvetica/HelveticaNeue-Bold.ttf'))
-  }
-
-
-  # TODO write a warning message about showtext_auto() and rendering
-  showtext::showtext_auto()
-  showtext::showtext_opts(dpi = 300)
-  if(.Platform$OS.type == 'windows'){
-    x11()
-  }
+  # if(sum(grepl('photina|myriad-pro|helvetica_medium|helvetica_light', sysfonts::font_families())) != 4){
+  #   path <- system.file(package = "ggbrookings", 'fonts')
+  #   sysfonts::font_add(family = 'photina',
+  #                      regular = glue::glue('{path}/Photina/Photina.ttf'))
+  #   sysfonts::font_add(
+  #     family = 'myriad-pro',
+  #     regular = glue::glue('{path}/Myriad-Pro/MYRIADPRO-REGULAR.ttf'),
+  #     bold = glue::glue('{path}/Myriad-Pro/MYRIADPRO-SEMIBOLD.ttf'),
+  #     italic = glue::glue('{path}/Myriad-Pro/MYRIADPRO-CONDIT.ttf'),
+  #     bolditalic = glue::glue('{path}/Myriad-Pro/MYRIADPRO-BOLDIT.ttf')
+  #   )
+  #
+  #   sysfonts::font_add(
+  #     family = 'helvetica_medium',
+  #     regular = glue::glue('{path}/Helvetica/HelveticaNeueLTStd-Md.ttf'),
+  #     bold = glue::glue('{path}/Helvetica/HelveticaNeue-Bold.ttf')
+  #   )
+  #   sysfonts::font_add(family = 'helvetica_light',
+  #                      regular = glue::glue('{path}/Helvetica/HelveticaNeueLTStd-Lt.ttf'),
+  #                      bold = glue::glue('{path}/Helvetica/HelveticaNeue-Bold.ttf'))
+  # }
+  #
+  #
+  # # TODO write a warning message about showtext_auto() and rendering
+  # showtext::showtext_auto()
+  # showtext::showtext_opts(dpi = 300)
+  # if(.Platform$OS.type == 'windows'){
+  #   x11()
+  # }
 
   theme_brookings(...) %+replace%
     theme(
@@ -342,3 +342,4 @@ theme_thp <- function(base_size = 12,
 
     )
 }
+
