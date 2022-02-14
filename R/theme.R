@@ -224,7 +224,7 @@ theme_brookings <- function(base_size = 14,
 #' @export
 #'
 theme_thp <- function(base_size = 12,
-                      base_family = "calibri",
+                      base_family = "Calibri",
                       base_line_size = base_size / 24,
                       base_rect_size = base_size / 24,
                       ...) {
@@ -288,7 +288,7 @@ theme_thp <- function(base_size = 12,
       ),
       plot.title = ggtext::element_textbox_simple(
         # font size "large"
-        family = 'calibri',
+        family = 'Calibri',
         size = rel(1.33),
         color = "#007363",
         hjust = 0,
@@ -300,14 +300,14 @@ theme_thp <- function(base_size = 12,
                                 margin = margin(0.8 * half_line, 0.8 * half_line, 0.8 * half_line, 0.8 * half_line)),
       plot.subtitle = ggtext::element_textbox_simple(
         # font size "regular"
-        family = 'calibri',
+        family = 'Calibri',
         hjust = 0,
         size = rel(1),
         vjust = 1,
         margin = margin(b = base_size)
       ),
       plot.tag = ggplot2::element_text(
-        family = 'calibri',
+        family = 'Calibri',
         size = rel(2/3),
         hjust = 0,
         vjust = 1,
@@ -316,7 +316,7 @@ theme_thp <- function(base_size = 12,
       plot.caption = ggtext::element_textbox_simple(
         # font size "small"
         size = rel(2/3),
-        family = 'calibri',
+        family = 'Calibri',
         vjust = 1,
         color = "#666666",
         hjust = 0,
