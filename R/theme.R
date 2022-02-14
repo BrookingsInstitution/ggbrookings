@@ -78,7 +78,7 @@ theme_brookings <- function(base_size = 14,
     axis.title.x = ggplot2::element_text(
       margin = margin(t = 1.25 * half_line),
       size = rel(0.8),
-      vjust = 1, face = "bold"
+      vjust = 1
     ),
     axis.title.x.top = ggplot2::element_text(
       margin = margin(b = half_line / 2),
@@ -88,7 +88,6 @@ theme_brookings <- function(base_size = 14,
       angle = 90,
       margin = margin(r = half_line * 1.25),
       vjust = 1,
-      face = "bold",
       size = rel(0.8)
     ),
     axis.title.y.right = ggplot2::element_text(
@@ -134,7 +133,6 @@ theme_brookings <- function(base_size = 14,
     strip.text = ggplot2::element_text(
       colour = "#FAFAFA",
       size = rel(0.8),
-      face = "bold",
       margin = margin(0.8 * half_line, 0.8 * half_line, 0.8 * half_line, 0.8 * half_line)
     ),
     # strip.text.x =       NULL,
@@ -226,7 +224,7 @@ theme_brookings <- function(base_size = 14,
 #' @export
 #'
 theme_thp <- function(base_size = 12,
-                      base_family = "myriad-pro",
+                      base_family = "calibri",
                       base_line_size = base_size / 24,
                       base_rect_size = base_size / 24,
                       ...) {
@@ -290,7 +288,7 @@ theme_thp <- function(base_size = 12,
       ),
       plot.title = ggtext::element_textbox_simple(
         # font size "large"
-        family = 'photina',
+        family = 'calibri',
         size = rel(1.33),
         color = "#007363",
         hjust = 0,
@@ -299,18 +297,17 @@ theme_thp <- function(base_size = 12,
       strip.background = ggplot2::element_rect(fill = "#007363", colour = NA),
       strip.text = ggplot2::element_text(colour = "#FAFAFA",
                                 size = rel(1),
-                                face = "bold",
                                 margin = margin(0.8 * half_line, 0.8 * half_line, 0.8 * half_line, 0.8 * half_line)),
       plot.subtitle = ggtext::element_textbox_simple(
         # font size "regular"
-        family = 'photina',
+        family = 'calibri',
         hjust = 0,
         size = rel(1),
         vjust = 1,
         margin = margin(b = base_size)
       ),
       plot.tag = ggplot2::element_text(
-        family = 'helvetica',
+        family = 'calibri',
         size = rel(2/3),
         hjust = 0,
         vjust = 1,
@@ -319,13 +316,13 @@ theme_thp <- function(base_size = 12,
       plot.caption = ggtext::element_textbox_simple(
         # font size "small"
         size = rel(2/3),
-        family = 'helvetica',
+        family = 'calibri',
         vjust = 1,
         color = "#666666",
         hjust = 0,
         margin = margin(t = half_line)
       ),
-      axis.text = ggplot2::element_text(size = rel(0.833), colour = "#000000", face = 'bold'),
+      axis.text = ggplot2::element_text(size = rel(0.833), colour = "#000000"),
       axis.title.x = ggplot2::element_text(
         margin = margin(t = 1.25 * half_line),
         size = rel(0.833),
