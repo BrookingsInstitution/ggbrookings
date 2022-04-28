@@ -2,11 +2,16 @@ Package: ggbrookings
 Title: Grammar of Graphics in Brookings Style
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Manuel",
+    c(person(given = "Manuel",
            family = "Alcalá Kovalski",
-           role = c("aut", "cre"),
-           email = "malcalakovalski@brookings.edu",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           role = "aut",
+           email = "malcalakovalski@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID")),
+      person(given = "Valerie",
+           family = "Wirtschafter",
+           role = "cre",
+           email = "vwirtschafter@brookings.edu",
+           comment = c(ORCID = "ANOTHER-ORCID-ID")))
 Description: An implementation of the Brookings style guide using ggplot2.
 License: GPL-3 + file LICENSE
 URL: https://brookingsinstitution.github.io/ggbrookings/,

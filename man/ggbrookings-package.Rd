@@ -20,7 +20,12 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Manuel Alcalá Kovalski \email{malcalakovalski@brookings.edu} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Valerie Wirtschafter \email{vwirtschafter@brookings.edu} (\href{https://orcid.org/ANOTHER-ORCID-ID}{ORCID})
+
+Authors:
+\itemize{
+  \item Manuel Alcalá Kovalski \email{malcalakovalski@gmail.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+}
 
 }
 \keyword{internal}

@@ -6,7 +6,7 @@
 \usage{
 theme_thp(
   base_size = 12,
-  base_family = "myriad-pro",
+  base_family = "Calibri",
   base_line_size = base_size/24,
   base_rect_size = base_size/24,
   ...
