@@ -1,63 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/404.html</loc>
   </url>
   <url>
-    <loc>/LICENSE-text.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>/LICENSE.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/LICENSE.html</loc>
   </url>
   <url>
-    <loc>/articles/index.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/articles/index.html</loc>
   </url>
   <url>
-    <loc>/articles/logos.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/articles/logos.html</loc>
   </url>
   <url>
-    <loc>/articles/palettes.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/articles/palettes.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/authors.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/index.html</loc>
   </url>
   <url>
-    <loc>/reference/add_logo.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/add_logo.html</loc>
   </url>
   <url>
-    <loc>/reference/brookings_cols.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/brookings_cols.html</loc>
   </url>
   <url>
-    <loc>/reference/brookings_pal.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/brookings_pal.html</loc>
   </url>
   <url>
-    <loc>/reference/brookings_palettes.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/brookings_palettes.html</loc>
   </url>
   <url>
-    <loc>/reference/brookings_view_palette.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/brookings_save.html</loc>
   </url>
   <url>
-    <loc>/reference/import_roboto.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/brookings_view_palette.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/ggbrookings-package.html</loc>
   </url>
   <url>
-    <loc>/reference/roboto_import.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/import_roboto.html</loc>
   </url>
   <url>
-    <loc>/reference/scale_color_brookings.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/import_thp_fonts.html</loc>
   </url>
   <url>
-    <loc>/reference/scale_fill_brookings.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/scales_brookings.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/register_thp_fonts.html</loc>
   </url>
   <url>
-    <loc>/reference/theme_brookings.html</loc>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/roboto_import.html</loc>
+  </url>
+  <url>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/scale_color_brookings.html</loc>
+  </url>
+  <url>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/scale_fill_brookings.html</loc>
+  </url>
+  <url>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/scales_brookings.html</loc>
+  </url>
+  <url>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/theme_brookings.html</loc>
+  </url>
+  <url>
+    <loc>https://brookingsinstitution.github.io/ggbrookings/reference/theme_thp.html</loc>
   </url>
 </urlset>
