@@ -126,8 +126,12 @@ ggsave("penguins.png", p1, dpi=300, height=3.7, width=6, units="in")
 
 Finally, to add a logo call:
 
-```{r, out.width='70%', fig.align='center'}
+```{r, out.width='70%', fig.align='center', eval = FALSE}
 add_logo('penguins.png', logo_path = 'brookings', 'bottom right', 5)
+```
+
+```{r, out.width='70%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../../man/figures/penguins.png", error = FALSE)
 ```
 
 The image will show up in your Viewer pane. To save it as a png you can right click on it and select "Save Image As..." or, more reproducibly, assign it to an object and then call `magick::image_write()` as below:
