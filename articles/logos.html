@@ -219,7 +219,7 @@
 <p>Finally, to add a logo call:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/add_logo.html">add_logo</a></span><span class="op">(</span><span class="st">'penguins.png'</span>, logo_path <span class="op">=</span> <span class="st">'brookings'</span>, <span class="st">'bottom right'</span>, <span class="fl">5</span><span class="op">)</span></code></pre></div>
-<p><img src="../../reference/figures/penguins.png" width="70%" style="display: block; margin: auto;"></p>
+<p><img src="../reference/figures/penguins.png" width="70%" style="display: block; margin: auto;"></p>
 <p>The image will show up in your Viewer pane. To save it as a png you can right click on it and select “Save Image As…” or, more reproducibly, assign it to an object and then call <code><a href="https://docs.ropensci.org/magick/reference/editing.html" class="external-link">magick::image_write()</a></code> as below:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">penguins_plot</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/add_logo.html">add_logo</a></span><span class="op">(</span><span class="st">'penguins.png'</span>, logo_path <span class="op">=</span> <span class="st">'brookings'</span>, <span class="st">'bottom right'</span>, <span class="fl">5</span><span class="op">)</span>
