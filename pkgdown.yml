@@ -1,10 +1,10 @@
 pandoc: 2.14.2
-pkgdown: 2.0.3
+pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
   logos: logos.html
   palettes: palettes.html
-last_built: 2022-04-29T20:23Z
+last_built: 2022-07-26T14:40Z
 urls:
   reference: https://brookingsinstitution.github.io/ggbrookings/reference
   article: https://brookingsinstitution.github.io/ggbrookings/articles
