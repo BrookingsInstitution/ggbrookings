@@ -6,7 +6,7 @@
 \usage{
 theme_brookings(
   base_size = 14,
-  base_family = "Roboto",
+  base_family = "Inter",
   base_line_size = base_size/24,
   base_rect_size = base_size/24,
   web = FALSE,
@@ -16,7 +16,7 @@ theme_brookings(
 \arguments{
 \item{base_size}{base font size, given in pts.}
 
-\item{base_family}{base font family. Default is "Roboto".}
+\item{base_family}{base font family. Default is "Inter".}
 
 \item{base_line_size}{line size in mm.}
 

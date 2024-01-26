@@ -6,7 +6,7 @@
 \alias{ggbrookings-package}
 \title{ggbrookings: Grammar of Graphics in Brookings Style}
 \description{
-\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
 An implementation of the Brookings style guide using ggplot2.
 }

@@ -15,7 +15,7 @@ theme_thp(
 \arguments{
 \item{base_size}{base font size, given in pts.}
 
-\item{base_family}{base font family. Default is "Roboto".}
+\item{base_family}{base font family. Default is "Inter".}
 
 \item{base_line_size}{line size in mm.}
 
