@@ -12,7 +12,7 @@
 #' @export
 brookings_colors <-
   c(
-    `brookings blue` = "#003A79",
+    `brookings blue` = "#003A70",
     # Brand blue
     brand_blue_90 = "#022A4E",
     brand_blue_80 = "#003A70",
@@ -27,12 +27,12 @@ brookings_colors <-
     # Vivid blue
     vivid_blue_90 = "#023147",
     vivid_blue_80 = "#004B6E",
-    vivid_blue_70 = "#00649F",
+    vivid_blue_70 = "#0061A0",
     vivid_blue_60 = "#1479BB",
     vivid_blue_50 = "#1E8AD6",
     vivid_blue_40 = "#3398EA",
     vivid_blue_30 = "#5AADF6",
-    vivid_blue_20 = "#8AC6FF",
+    vivid_blue_20 = "#8BB8E8",
     vivid_blue_10 = "#BFDFFC",
 
     # Teal
@@ -62,7 +62,7 @@ brookings_colors <-
     yellow_80 = "#877414",
     yellow_70 = "#C7A70A",
     yellow_60 = "#E0BB00",
-    yellow_50 = "#F5CC00",
+    yellow_50 = "#F2CD00",
     yellow_40 = "#FFDD00",
     yellow_30 = "#FFE926",
     yellow_20 = "#FFF170",
@@ -72,7 +72,7 @@ brookings_colors <-
     orange_90 = "#663205",
     orange_80 = "#994B08",
     orange_70 = "#B85B0A",
-    orange_60 = "#F26D00",
+    orange_60 = "#EF6A00",
     orange_50 = "#FF851A",
     orange_40 = "#FF9E1B",
     orange_30 = "#FFB24D",
@@ -113,7 +113,7 @@ brookings_colors <-
     purple_10 = "#E9E0FC",
 
     # Grey
-    `PMS 427 C` = "#D0D3D4",
+    `PMS 427 C` = "#B1B3b3",
 
     # The Hamilton Project colors
     THP_turquoise ='#007363',
