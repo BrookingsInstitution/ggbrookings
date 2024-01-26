@@ -1,5 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- badges: start -->
+
+%[![R-CMD-check](%5Bhttps://github.com/BrookingsInstitution/ggbrookings/workflows/R-CMD-check/badge.svg)](https://github.com/BrookingsInstitution/ggbrookings/actions)\](<https://github.com/BrookingsInstitution/ggbrookings/workflows/R-CMD-check/badge.svg>)\](<https://github.com/BrookingsInstitution/ggbrookings/actions>))
+%[![R-CMD-check](https://github.com/BrookingsInstitution/ggbrookings/workflows/R-CMD-check/badge.svg)](https://github.com/BrookingsInstitution/ggbrookings/actions)
+
+<!-- badges: end -->
 
 # ggbrookings <img src="man/figures/logo.png" align="right" width="120"/>
 
@@ -31,17 +37,17 @@ Sys.setenv(TZ = 'UTC')
 
 ## Fonts
 
-**Roboto** is Brooking’s main font. You will need to install it by
+**Inter** is Brooking’s main font. You will need to install it by
 visiting [Google
-fonts](https://fonts.google.com/specimen/Roboto?query=Roboto) and
-clicking “Download family”.
+fonts](https://fonts.google.com/specimen/Inter?query=Inter) and clicking
+“Download family”.
 
 Once you’ve done this, unzip and open each of the .ttf files and click
 install. Finaly, run the code chunk below to ensure Roboto is imported
 and registered:
 
 ``` r
-import_roboto()
+import_inter()
 ```
 
 If you run into any problems while installing fonts on a Windows
@@ -58,20 +64,20 @@ remotes::install_version("Rttf2pt1", version = "1.3.8")
 Currently, the `ggbrookings` package only has a few simple user facing
 functions:
 
--   `theme_brookings()` overrides the default `ggplot2` theme for a
-    custom one which adheres to the Brookings style guide.
+- `theme_brookings()` overrides the default `ggplot2` theme for a custom
+  one which adheres to the Brookings style guide.
 
--   `scale_color_brookings()` and `scale_fill_brookings()` provide
-    several color palettes that are consistent with the Brookings brand
-    and designed to provide color accessiblity.
+- `scale_color_brookings()` and `scale_fill_brookings()` provide several
+  color palettes that are consistent with the Brookings brand and
+  designed to provide color accessiblity.
 
--   `brookings_view_palette()` is a helper function to see the colors
-    from each palette and extract their hex codes.
+- `brookings_view_palette()` is a helper function to see the colors from
+  each palette and extract their hex codes.
 
--   `add_logo()` adds a program/center logo to your plots after saving
-    them. See the [vignette on adding
-    logos](https://brookingsinstitution.github.io/ggbrookings/articles/logos.html)
-    for more details.
+- `add_logo()` adds a program/center logo to your plots after saving
+  them. See the [vignette on adding
+  logos](https://brookingsinstitution.github.io/ggbrookings/articles/logos.html)
+  for more details.
 
 ## Examples
 
