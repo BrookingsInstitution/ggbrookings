@@ -2,9 +2,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->
 
-%[![R-CMD-check](%5Bhttps://github.com/BrookingsInstitution/ggbrookings/workflows/R-CMD-check/badge.svg)](https://github.com/BrookingsInstitution/ggbrookings/actions)\](<https://github.com/BrookingsInstitution/ggbrookings/workflows/R-CMD-check/badge.svg>)\](<https://github.com/BrookingsInstitution/ggbrookings/actions>))
-%[![R-CMD-check](https://github.com/BrookingsInstitution/ggbrookings/workflows/R-CMD-check/badge.svg)](https://github.com/BrookingsInstitution/ggbrookings/actions)
-
 <!-- badges: end -->
 
 # ggbrookings <img src="man/figures/logo.png" align="right" width="120"/>
