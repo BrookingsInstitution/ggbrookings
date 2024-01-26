@@ -99,7 +99,7 @@ For more information on how this function works, please read Tom Mock's fantasti
 We start by creating a plot and using `ggsave()` to save it.
 
 ```{r, include=FALSE, eval=TRUE, echo=FALSE}
-ggbrookings::import_roboto()
+ggbrookings::import_inter()
 ```
 
 ```{r, eval = TRUE}
