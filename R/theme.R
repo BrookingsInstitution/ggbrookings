@@ -2,7 +2,7 @@
 #'
 #'  A theme following the Brookings style guide.
 #' @param base_size base font size, given in pts.
-#' @param base_family base font family. Default is "Roboto".
+#' @param base_family base font family. Default is "Inter".
 #' @param base_line_size line size in mm.
 #' @param base_rect_size border size in mm.
 #' @param web If TRUE sets the plot background color to the Brookings website background color
@@ -14,7 +14,7 @@
 #'
 
 theme_brookings <- function(base_size = 14,
-                            base_family = "Roboto",
+                            base_family = "Inter",
                             base_line_size = base_size / 24,
                             base_rect_size = base_size / 24,
                             web = FALSE,
@@ -46,7 +46,7 @@ theme_brookings <- function(base_size = 14,
       ggplot2::element_rect(
         fill = NULL,
         colour = "black",
-        size = base_rect_size,
+        linewidth = base_rect_size,
         linetype = 1
       ),
     text =
@@ -129,7 +129,7 @@ theme_brookings <- function(base_size = 14,
     # panel.spacing.x =  unit(1.5, "lines"),
     # panel.spacing.y =  unit(2, "lines"),
     panel.ontop = FALSE,
-    strip.background = ggplot2::element_rect(fill = "#003A79", colour = NA),
+    strip.background = ggplot2::element_rect(fill = "#003A70", colour = NA),
     strip.text = ggplot2::element_text(
       colour = "#FAFAFA",
       size = rel(0.8),
@@ -147,7 +147,7 @@ theme_brookings <- function(base_size = 14,
     plot.title = ggtext::element_textbox_simple(
       # font size "large"
       size = rel(1.2),
-      color = "#003A79",
+      color = "#191919",
       face = "bold",
       hjust = 0,
       vjust = 1,
@@ -158,6 +158,8 @@ theme_brookings <- function(base_size = 14,
       # font size "regular"
       hjust = 0,
       size = rel(1),
+      color = "#191919",
+      face = "plain",
       vjust = 1,
       margin = margin(b = base_size)
     ),
@@ -166,6 +168,7 @@ theme_brookings <- function(base_size = 14,
       size = rel(0.8),
       vjust = 1,
       color = "#666666",
+      face = "plain",
       hjust = 0,
       margin = margin(t = half_line)
     ),
@@ -174,7 +177,7 @@ theme_brookings <- function(base_size = 14,
       size = rel(0.8),
       hjust = 0,
       vjust = 1,
-      color = "#003A79"
+      color = "#666666"
     ),
     plot.tag.position = c(0, 1),
     plot.margin = margin(half_line, half_line, half_line * 2, half_line),
@@ -215,7 +218,7 @@ theme_brookings <- function(base_size = 14,
 #' Title
 #'
 #' @param base_size base font size, given in pts.
-#' @param base_family base font family. Default is "Roboto".
+#' @param base_family base font family. Default is "Inter".
 #' @param base_line_size line size in mm.
 #' @param base_rect_size border size in mm.
 #' @param ... additional arguments passed to theme_brookings()
